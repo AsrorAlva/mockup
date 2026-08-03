@@ -1,0 +1,149 @@
+# Design Foundation
+
+## Primary Color
+
+### Burgundy
+`#7E1518`
+
+The primary brand color representing Millennia World School.
+
+Use for:
+
+- Header navigation
+- Primary buttons
+- Important headings
+- Active navigation
+- Links
+- Key call-to-action sections
+
+Burgundy should establish the school's visual identity without dominating the entire page.
+
+---
+
+## Secondary Color
+
+### Gold
+`#D6A13A`
+
+Represents excellence, achievement, growth, and celebration.
+
+Use sparingly for:
+
+- CTA highlights
+- Awards
+- Statistics
+- Important numbers
+- Hover accents
+- Decorative dividers
+
+Avoid using Gold as the main interface color.
+
+---
+
+## Third Color
+
+### Warm Ivory
+`#FAF8F5`
+
+Main background color.
+
+Use instead of pure white to create a warmer and more welcoming atmosphere.
+
+Secondary surface:
+
+`#FFFFFF`
+
+Used for cards, forms, dialogs, and content sections.
+
+Text color:
+
+### Charcoal
+`#241718`
+
+Used for all primary text to improve readability.
+
+---
+
+# Typography
+
+## Headings
+
+**Plus Jakarta Sans**
+
+Weights:
+
+- Bold
+- ExtraBold
+
+Use for:
+
+- Hero headline
+- Section title
+- Navigation
+- CTA
+- Cards
+
+---
+
+## Body Text
+
+**Nunito Sans**
+
+Weights:
+
+- Regular
+- SemiBold
+
+Use for:
+
+- Paragraphs
+- Descriptions
+- Forms
+- Buttons
+- Cards
+
+---
+
+## Quotes
+
+**Lora**
+
+Style:
+
+- Medium Italic
+
+Use only for:
+
+- Principal's message
+- Vision & Mission highlights
+- Testimonials
+- Inspirational quotes
+
+---
+
+# Typography Guidelines
+
+- Use sentence case.
+- Avoid long ALL CAPS headings.
+- Use generous line height (1.6–1.8).
+- Keep paragraphs short and readable.
+- Maintain consistent spacing between headings and content.
+- Do not introduce additional font families.
+
+---
+
+# Overall Feeling
+
+The website should feel:
+
+- Warm
+- Welcoming
+- Trustworthy
+- Modern
+- Elegant
+- Family-friendly
+- Professional
+- Calm
+- Inspiring
+
+The design should communicate educational excellence while remaining approachable for parents and prospective students.
