@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/AcademicDetail.css" />
+    <link rel="stylesheet" href="../styles/NewsStyles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/Contact.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Noto+Serif+KR:wght@200..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../components.js" defer></script>
+    <script src="../script.js" defer></script>
+
+    <title>News | Millennia World School</title>
+  </head>
+  <body class="page-body" data-page="news">
+    <div data-header></div>
+    <main>
+      <!-- Hero Section -->
+      <div class="page-hero-k">
+        <div class="hero-k-content">
+          <h1>School News</h1>
+          <img
+            class="hero-line"
+            src="https://ecole.cmsmasters.studio/wp-content/uploads/2019/07/zig-zag.png"
+            alt="decorative line"
+          />
+          <p>
+            Latest updates, activities, and stories from Millennia World School.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Layout Container (Content + Sidebar) -->
+      <div class="blog-layout-container">
+        <!-- Left Column: News Post Feed -->
+        <section class="blog-main-content">
+          <!-- Post Item 1 -->
+          <article class="blog-post-card">
+            <div class="post-image-placeholder">
+              <span>780 x 440</span>
+            </div>
+            <div class="post-meta">
+              <span class="badge badge-activities">Chemistry</span>
+              <span class="post-date">December 10, 2026</span>
+              <span class="post-author">by <strong>MWS Team</strong></span>
+            </div>
+            <h2><a href="news-detail.html">Chemistry for Children and Teenagers</a></h2>
+            <p class="post-excerpt">
+              There are many different school classes, ranging from basic
+              required courses to elective "passion projects." Students engage
+              in hands-on experiments to understand core chemical concepts
+              safely.
+            </p>
+            <div class="post-footer">
+              <a href="news-detail.html" class="btn-read-more">READ MORE</a>
+              <span class="post-likes">♡ 1</span>
+            </div>
+          </article>
+
+          <!-- Post Item 2 -->
+          <article class="blog-post-card">
+            <div class="post-image-placeholder">
+              <span>780 x 440</span>
+            </div>
+            <div class="post-meta">
+              <span class="badge badge-activities">Activities</span>
+              <span class="post-date">November 28, 2026</span>
+              <span class="post-author">by <strong>MWS Team</strong></span>
+            </div>
+            <h2>
+              <a href="#">Extracurricular Activities for Schoolchildren</a>
+            </h2>
+            <p class="post-excerpt">
+              Our extracurricular activities help students build teamwork,
+              resilience, and new physical or artistic skills alongside their
+              academic curriculum.
+            </p>
+            <div class="post-footer">
+              <a href="#" class="btn-read-more">READ MORE</a>
+              <span class="post-likes">♡ 4</span>
+            </div>
+          </article>
+
+          <!-- Pagination -->
+          <nav class="blog-pagination">
+            <span class="page-number active">1</span>
+            <a href="#" class="page-number">2</a>
+            <a href="#" class="page-number">3</a>
+            <a href="#" class="next-page">→</a>
+          </nav>
+        </section>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="blog-sidebar">
+          <!-- Search Widget -->
+          <div class="widget widget-search">
+            <form class="search-form" action="#" method="get">
+              <input type="text" placeholder="enter keywords" name="s" />
+              <button type="submit">🔍</button>
+            </form>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="widget widget-categories">
+            <h3 class="widget-title">Categories</h3>
+            <ul class="widget-list">
+              <li>
+                <a href="#">Activities <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="#">Academics <span>(8)</span></a>
+              </li>
+              <li>
+                <a href="#">School Events <span>(5)</span></a>
+              </li>
+              <li>
+                <a href="#">Achievements <span>(3)</span></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Schedule / Information Widget (Seperti di screenshot template) -->
+          <div class="widget widget-schedule">
+            <h3 class="widget-title">Schedule Highlights</h3>
+            <div class="schedule-item">
+              <strong class="subject">English Club</strong>
+              <span class="day">Tuesday</span>
+              <span class="time">9:00 am - 10:00 am</span>
+            </div>
+            <div class="schedule-item">
+              <strong class="subject">Athletics & Sports</strong>
+              <span class="day">Tuesday</span>
+              <span class="time">10:00 am - 11:00 am</span>
+            </div>
+          </div>
+
+          <!-- Recent Posts Widget -->
+          <div class="widget widget-recent-posts">
+            <h3 class="widget-title">Recent Updates</h3>
+            <ul class="recent-list">
+              <li>
+                <a href="#">Chemistry for Children and Teenagers</a>
+                <span class="date">Dec 10, 2026</span>
+              </li>
+              <li>
+                <a href="#">Extracurricular Activities for Schoolchildren</a>
+                <span class="date">Nov 28, 2026</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <div data-footer></div>
+  </body>
+</html>

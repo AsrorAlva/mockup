@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/AcademicDetail.css" />
+    <link rel="stylesheet" href="../styles/NewsStyles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/Contact.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Noto+Serif+KR:wght@200..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../components.js" defer></script>
+    <script src="../script.js" defer></script>
+
+    <title>School Calendar | Millennia World School</title>
+  </head>
+  <body class="page-body" data-page="school-calendar">
+    <div data-header></div>
+
+    <main>
+      <!-- Hero Section Warna Merah -->
+      <div class="page-hero-k">
+        <div class="hero-k-content">
+          <h1>School Calendar</h1>
+          <img
+            class="hero-line"
+            src="https://ecole.cmsmasters.studio/wp-content/uploads/2019/07/zig-zag.png"
+            alt="decorative line"
+          />
+          <p>
+            Keep track of Millennia World School events, admissions activities,
+            parent meetings, and student programs.
+          </p>
+        </div>
+      </div>
+
+      <section class="calendar-section">
+        <!-- Filter Category / Term Bar -->
+        <div class="calendar-controls">
+          <div class="filter-group">
+            <button class="filter-btn active">All Events</button>
+            <button class="filter-btn">Academic</button>
+            <button class="filter-btn">Holidays</button>
+            <button class="filter-btn">Parents & Community</button>
+          </div>
+          <div class="term-select">
+            <span>Academic Year: <strong>2026/2027</strong></span>
+          </div>
+        </div>
+
+        <!-- Layout Main Grid: Left Calendar Widget, Right Events List -->
+        <div class="calendar-layout-grid">
+          <!-- Left Column: Visual Interactive Calendar -->
+          <aside class="calendar-widget-card">
+            <div class="widget-header">
+              <button class="month-nav-btn">&lt;</button>
+              <h3>August 2026</h3>
+              <button class="month-nav-btn">&gt;</button>
+            </div>
+
+            <!-- Days Header -->
+            <div class="calendar-days-header">
+              <span>Su</span><span>Mo</span><span>Tu</span><span>We</span
+              ><span>Th</span><span>Fr</span><span>Sa</span>
+            </div>
+
+            <!-- Days Grid Matrix -->
+            <div class="calendar-dates-grid">
+              <!-- Prev Month Dates -->
+              <span class="day-num inactive">26</span>
+              <span class="day-num inactive">27</span>
+              <span class="day-num inactive">28</span>
+              <span class="day-num inactive">29</span>
+              <span class="day-num inactive">30</span>
+              <span class="day-num inactive">31</span>
+
+              <!-- Current Month Dates -->
+              <span class="day-num">1</span>
+              <span class="day-num">2</span>
+              <span class="day-num">3</span>
+              <span class="day-num">4</span>
+              <span class="day-num">5</span>
+              <span class="day-num">6</span>
+              <span class="day-num">7</span>
+              <span class="day-num">8</span>
+              <span class="day-num">9</span>
+              <!-- Event Date 1 -->
+              <span class="day-num active has-event" title="Orientation Week"
+                >10</span
+              >
+              <span class="day-num">11</span>
+              <span class="day-num">12</span>
+              <span class="day-num">13</span>
+              <span class="day-num">14</span>
+              <span class="day-num">15</span>
+              <span class="day-num">16</span>
+              <!-- Event Date 2 -->
+              <span class="day-num has-event" title="Independence Day">17</span>
+              <span class="day-num">18</span>
+              <span class="day-num">19</span>
+              <span class="day-num">20</span>
+              <span class="day-num">21</span>
+              <span class="day-num">22</span>
+              <span class="day-num">23</span>
+              <span class="day-num">24</span>
+              <span class="day-num">25</span>
+              <span class="day-num">26</span>
+              <span class="day-num">27</span>
+              <span class="day-num">28</span>
+              <span class="day-num">29</span>
+              <span class="day-num">30</span>
+              <span class="day-num">31</span>
+            </div>
+
+            <div class="calendar-legend">
+              <span class="legend-item"
+                ><i class="dot dot-event"></i> Has Event</span
+              >
+              <span class="legend-item"
+                ><i class="dot dot-active"></i> Selected</span
+              >
+            </div>
+          </aside>
+
+          <!-- Right Column: Calendar Events List -->
+          <div class="events-list">
+            <!-- Event Item 1 -->
+            <article class="event-card">
+              <div class="event-date">
+                <span class="day">10</span>
+                <span class="month">AUG</span>
+              </div>
+              <div class="event-details">
+                <span class="badge badge-academic">Academic</span>
+                <h3>Primary School Orientation Week</h3>
+                <p>
+                  Orientation program welcoming new primary students to MWS
+                  campus life and environment.
+                </p>
+                <span class="event-time"
+                  >⏰ 08:00 AM - 12:00 PM | 📍 Main Hall</span
+                >
+              </div>
+            </article>
+
+            <!-- Event Item 2 -->
+            <article class="event-card">
+              <div class="event-date">
+                <span class="day">17</span>
+                <span class="month">AUG</span>
+              </div>
+              <div class="event-details">
+                <span class="badge badge-holiday">Holiday</span>
+                <h3>Independence Day Celebration</h3>
+                <p>
+                  National holiday & student flag ceremony followed by
+                  traditional games.
+                </p>
+                <span class="event-time"
+                  >⏰ All Day Event | 📍 School Field</span
+                >
+              </div>
+            </article>
+
+            <!-- Event Item 3 -->
+            <article class="event-card">
+              <div class="event-date">
+                <span class="day">05</span>
+                <span class="month">SEP</span>
+              </div>
+              <div class="event-details">
+                <span class="badge badge-parent">Parents</span>
+                <h3>Parent Teacher Meeting (PTM)</h3>
+                <p>
+                  Discussion on student learning progress and term goals with
+                  homeroom teachers.
+                </p>
+                <span class="event-time"
+                  >⏰ 09:00 AM - 02:00 PM | 📍 Classrooms</span
+                >
+              </div>
+            </article>
+
+            <!-- Event Item 4 -->
+            <article class="event-card">
+              <div class="event-date">
+                <span class="day">17</span>
+                <span class="month">OCT</span>
+              </div>
+              <div class="event-details">
+                <span class="badge badge-academic">Academic</span>
+                <h3>Millennia Student Showcase & Learning Exhibition</h3>
+                <p>
+                  Interactive student project showcase celebrating creativity,
+                  innovation, and leadership.
+                </p>
+                <span class="event-time"
+                  >⏰ 09:00 AM - 03:00 PM | 📍 Exhibition Center</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+  </body>
+</html>
