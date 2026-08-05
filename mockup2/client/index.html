@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Millennia World School mockup 2 homepage design."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Nunito+Sans:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/Styles.css" />
+    <script src="../components.js" defer></script>
+
+    <title>Millennia World School - Mockup 2</title>
+  </head>
+  <body data-page="home">
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <div class="header-left">
+          <a
+            class="brand"
+            href="#home"
+            aria-label="Millennia World School home"
+          >
+            <img src="../../Assets/image.svg" alt="Millennia World School" />
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Open navigation"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="primary-nav" id="primary-navigation" data-nav>
+            <ul>
+              <li><a class="active" href="#home">Home</a></li>
+              <li class="nav-dropdown">
+                <a href="#academics">Academics</a>
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  aria-label="Open academics menu"
+                  aria-expanded="false"
+                  data-dropdown-toggle
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#kindergarten">Kindergarten</a></li>
+                  <li><a href="#elementary">Elementary</a></li>
+                  <li><a href="#junior-high">Junior High</a></li>
+                  <li><a href="#academics">Curriculum</a></li>
+                </ul>
+              </li>
+              <li><a href="#about">About us</a></li>
+              <li>
+                <a href="../../mockup1/client/school-calendar.html"
+                  >School calendar</a
+                >
+              </li>
+              <li><a href="../../mockup1/client/news.html">News</a></li>
+              <li><a href="#tour">Career</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <a class="header-cta motion-hover-lift" href="#tour">Book a Tour</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img
+            src="https://millenniaws.sch.id/wp-content/uploads/2021/11/Millennia-World-School-Building-768x511.jpg"
+            alt="Millennia World School building"
+          />
+        </div>
+        <div class="hero-content motion-fade-up">
+          <p class="eyebrow">International learning, local warmth</p>
+          <h1 id="hero-title">Millennia World School</h1>
+          <p>
+            A nurturing community where every learner is guided to think
+            critically, act confidently, and grow with character.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary motion-hover-lift" href="#tour">
+              Book a Tour
+            </a>
+            <a class="button button-soft motion-hover-lift" href="#academics">
+              Explore Academics
+            </a>
+          </div>
+        </div>
+        <div class="wave-divider" aria-hidden="true">
+          <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+            <path
+              d="M0,64
+           C180,140 360,0 540,64
+           C720,128 900,32 1080,80
+           C1260,128 1350,96 1440,48
+           L1440,140
+           L0,140
+           Z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <section
+        class="about-section"
+        id="about"
+        aria-label="About Millennia World School"
+      >
+        <div class="section-shell about-content motion-fade-up">
+          <p>
+            Millennia World School blends strong academic foundations with
+            personal guidance, creative exploration, and a caring classroom
+            culture. Students are encouraged to ask better questions, build
+            meaningful friendships, and discover how they learn best.
+          </p>
+          <a class="button button-primary motion-hover-lift" href="#academics">
+            Learn More
+          </a>
+        </div>
+      </section>
+
+      <section class="why-section" id="academics" aria-labelledby="why-title">
+        <div class="section-shell">
+          <div class="section-heading section-heading-center motion-fade-up">
+            <p class="section-kicker">Why choose us</p>
+            <h2 id="why-title">Learning that sees the whole child</h2>
+          </div>
+
+          <div class="why-column-grid">
+            <article class="why-column motion-fade-up motion-hover-lift">
+              <div class="media-placeholder why-photo">
+                <span>Photo Activity<br />580 x 580</span>
+              </div>
+              <h3>Teaching</h3>
+              <p>Clear instruction with thoughtful feedback and guidance.</p>
+            </article>
+            <article
+              class="why-column motion-fade-up motion-delay-100 motion-hover-lift"
+            >
+              <div class="media-placeholder why-photo">
+                <span>Photo Activity<br />580 x 580</span>
+              </div>
+              <h3>Learning</h3>
+              <p>Inquiry, practice, and reflection across core subjects.</p>
+            </article>
+            <article
+              class="why-column motion-fade-up motion-delay-200 motion-hover-lift"
+            >
+              <div class="media-placeholder why-photo">
+                <span>Photo Activity<br />580 x 580</span>
+              </div>
+              <h3>Extracurricular</h3>
+              <p>Activities that help students explore interests and talent.</p>
+            </article>
+            <article
+              class="why-column motion-fade-up motion-delay-300 motion-hover-lift"
+            >
+              <div class="media-placeholder why-photo">
+                <span>Photo Activity<br />580 x 580</span>
+              </div>
+              <h3>Student Support</h3>
+              <p>Care structures that keep wellbeing and progress visible.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="classes-section" aria-labelledby="classes-title">
+        <div class="section-shell">
+          <div class="section-heading motion-fade-up">
+            <h2 id="classes-title">Programs for every learning stage</h2>
+          </div>
+          <div class="class-grid">
+            <article
+              class="class-card motion-fade-up motion-hover-lift"
+              id="kindergarten"
+            >
+              <div class="media-placeholder class-photo">
+                <span>Image Placeholder<br />580 x 580</span>
+              </div>
+              <div class="class-card-body">
+                <span>Age 2 - 6</span>
+                <h3>Kindergarten</h3>
+                <p>
+                  Playful discovery, language readiness, and social confidence.
+                </p>
+                <a class="text-link" href="#kindergarten">Learn More</a>
+              </div>
+            </article>
+            <article
+              class="class-card motion-fade-up motion-delay-100 motion-hover-lift"
+              id="elementary"
+            >
+              <div class="media-placeholder class-photo">
+                <span>Image Placeholder<br />580 x 580</span>
+              </div>
+              <div class="class-card-body">
+                <span>Age 6 - 12</span>
+                <h3>Elementary</h3>
+                <p>
+                  Strong foundations with inquiry-led projects and
+                  collaboration.
+                </p>
+                <a class="text-link" href="#elementary">Learn More</a>
+              </div>
+            </article>
+            <article
+              class="class-card motion-fade-up motion-delay-200 motion-hover-lift"
+              id="junior-high"
+            >
+              <div class="media-placeholder class-photo">
+                <span>Image Placeholder<br />580 x 580</span>
+              </div>
+              <div class="class-card-body">
+                <span>Age 12 - 15</span>
+                <h3>Junior High</h3>
+                <p>
+                  Academic independence, leadership practice, and future
+                  readiness.
+                </p>
+                <a class="text-link" href="#junior-high">Learn More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="environment-section"
+        id="environment"
+        aria-labelledby="environment-title"
+      >
+        <div class="section-shell">
+          <div class="section-heading motion-fade-up">
+            <h2 id="environment-title">
+              Spaces that invite students to participate
+            </h2>
+          </div>
+        </div>
+        <div class="environment-gallery">
+          <article
+            class="environment-card environment-card-large motion-fade-up"
+          >
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />720 x 520</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Community corners</h3>
+              <p>
+                Warm social areas support friendship, collaboration, and
+                belonging.
+              </p>
+            </div>
+          </article>
+          <article class="environment-card motion-fade-up motion-delay-100">
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />420 x 520</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Healthy routines</h3>
+              <p>
+                Balanced daily habits help students stay energized for learning.
+              </p>
+            </div>
+          </article>
+          <article class="environment-card motion-fade-up motion-delay-200">
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />420 x 520</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Activity zones</h3>
+              <p>
+                Flexible spaces make performances, clubs, and events easy to
+                run.
+              </p>
+            </div>
+          </article>
+          <article class="environment-card motion-fade-up motion-delay-300">
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />420 x 420</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Library space</h3>
+              <p>
+                Quiet reading corners keep curiosity close to the school day.
+              </p>
+            </div>
+          </article>
+          <article
+            class="environment-card environment-card-wide motion-fade-up motion-delay-300"
+          >
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />720 x 420</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Creative studio</h3>
+              <p>
+                Practical rooms make art, design, and presentation work visible.
+              </p>
+            </div>
+          </article>
+          <article class="environment-card motion-fade-up motion-delay-500">
+            <div class="media-placeholder environment-photo">
+              <span>Campus Photo<br />420 x 420</span>
+            </div>
+            <div class="environment-overlay">
+              <h3>Outdoor learning</h3>
+              <p>
+                Open-air moments help students reset, observe, and collaborate.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="community-section"
+        id="community"
+        aria-labelledby="community-title"
+      >
+        <div class="section-shell">
+          <div class="section-heading section-heading-center motion-fade-up">
+            <h2 class="community-title">What our community says</h2>
+          </div>
+
+          <div class="community-grid" data-community-grid>
+            <article class="community-card motion-fade-up">
+              <div class="media-placeholder community-photo">
+                <span>Video / Photo<br />9:16</span>
+                <button
+                  class="play-button"
+                  type="button"
+                  data-open-modal
+                  aria-label="Open testimonial"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7Z" />
+                  </svg>
+                </button>
+                <div class="community-caption">
+                  <h3 data-community-title>Parent support</h3>
+                  <p data-community-text>
+                    Families feel seen because teachers communicate clearly.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="community-card motion-fade-up motion-delay-100">
+              <div class="media-placeholder community-photo">
+                <span>Video / Photo<br />9:16</span>
+                <button
+                  class="play-button"
+                  type="button"
+                  data-open-modal
+                  aria-label="Open testimonial"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7Z" />
+                  </svg>
+                </button>
+                <div class="community-caption">
+                  <h3 data-community-title>Student confidence</h3>
+                  <p data-community-text>
+                    Students are encouraged to speak, try, revise, and grow.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="community-card motion-fade-up motion-delay-200">
+              <div class="media-placeholder community-photo">
+                <span>Video / Photo<br />9:16</span>
+                <button
+                  class="play-button"
+                  type="button"
+                  data-open-modal
+                  aria-label="Open testimonial"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7Z" />
+                  </svg>
+                </button>
+                <div class="community-caption">
+                  <h3 data-community-title>Daily learning</h3>
+                  <p data-community-text>
+                    Class routines help each child understand the next step.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="community-card motion-fade-up motion-delay-300">
+              <div class="media-placeholder community-photo">
+                <span>Video / Photo<br />9:16</span>
+                <button
+                  class="play-button"
+                  type="button"
+                  data-open-modal
+                  aria-label="Open testimonial"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7Z" />
+                  </svg>
+                </button>
+                <div class="community-caption">
+                  <h3 data-community-title>Welcoming culture</h3>
+                  <p data-community-text>
+                    The school community makes new families feel at home.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="community-faq" aria-label="Community FAQ">
+            <button class="faq-item is-active" type="button" data-faq-index="0">
+              <span>How do parents experience MWS?</span>
+              <small>Shows family-focused stories.</small>
+            </button>
+            <button class="faq-item" type="button" data-faq-index="1">
+              <span>How do students grow here?</span>
+              <small>Shows learner-focused stories.</small>
+            </button>
+            <button class="faq-item" type="button" data-faq-index="2">
+              <span>How is support handled?</span>
+              <small>Shows care and wellbeing stories.</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour-section" id="tour" aria-labelledby="tour-title">
+        <div class="section-shell tour-panel motion-fade-up">
+          <div>
+            <p class="section-kicker">Visit MWS</p>
+            <h2 id="tour-title">Book a guided campus tour</h2>
+            <p>
+              Meet the team, explore learning spaces, and see how each division
+              supports students through the school day.
+            </p>
+          </div>
+          <a
+            class="button button-primary motion-hover-lift"
+            href="mailto:info@millennia21.id"
+          >
+            Contact Admission
+          </a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="section-shell footer-grid">
+          <div class="footer-brand">
+            <a
+              class="footer-logo"
+              href="#home"
+              aria-label="Millennia World School home"
+            >
+              <img
+                src="https://millenniaws.sch.id/wp-content/uploads/2021/11/Millennia-World-School-Logo-Only.svg"
+                alt="Millennia World School"
+              />
+            </a>
+            <p>
+              Millennia World School supports curious learners through caring
+              guidance, meaningful academics, and a warm international-minded
+              community.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h2>Explore</h2>
+            <a href="#about">About us</a>
+            <a href="#academics">Academics</a>
+            <a href="#environment">Campus environment</a>
+            <a href="#community">Community stories</a>
+          </div>
+
+          <div class="footer-links">
+            <h2>Programs</h2>
+            <a href="#kindergarten">Kindergarten</a>
+            <a href="#elementary">Elementary</a>
+            <a href="#junior-high">Junior High</a>
+            <a href="#academics">Curriculum</a>
+          </div>
+
+          <div class="footer-contact">
+            <h2>Contact</h2>
+            <p>Jl. Merpati Raya No. 103<br />
+              Sawah Lama, Ciputat, Tangerang Selatan, Banten 15413</p>
+            <a href="mailto:info@millennia21.id">info@millennia21.id</a>
+            <a href="#tour" class="footer-cta">Book a Tour</a>
+          </div>
+        </div>
+
+        <div class="section-shell footer-bottom">
+          <p>© 2026 Millennia World School. All rights reserved.</p>
+          <div>
+            <a href="#home">Back to top</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div class="testimonial-modal" data-modal aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          data-close-modal
+          aria-label="Close testimonial"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+        <div class="media-placeholder modal-photo">
+          <span>Video / Photo Testimonial<br />720 x 420</span>
+        </div>
+        <div>
+          <p class="section-kicker">Community story</p>
+          <h2 id="modal-title">A place where children are known</h2>
+          <p>
+            This testimonial area can hold a short embedded video or a photo
+            story. For the mockup, it shows how the popup interaction will feel
+            when a parent or student story is selected from the homepage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
