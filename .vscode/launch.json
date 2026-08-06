@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/mws-webdev/Downloads/Mockup_Remake_MWS/mockup2/styles",
-      "program": "/home/mws-webdev/Downloads/Mockup_Remake_MWS/mockup2/styles/build/Debug/outDebug",
+      "cwd": "/home/mws-webdev/Downloads/Mockup_Remake_MWS/mockup2/client",
+      "program": "/home/mws-webdev/Downloads/Mockup_Remake_MWS/mockup2/client/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,4 +1,130 @@
 (() => {
+  const fileName = window.location.pathname.split("/").pop() || "index.html";
+  const page = document.body.dataset.page || fileName.replace(".html", "");
+  const isHome = fileName === "index.html" || page === "home";
+  const homeHref = (hash = "") => (isHome ? hash || "#home" : `index.html${hash}`);
+  const active = (...names) => (names.includes(page) ? "active" : "");
+
+  const renderHeader = () => {
+    const target = document.querySelector("[data-header]");
+    if (!target) return;
+
+    target.outerHTML = `
+      <header class="site-header" data-header>
+        <div class="header-inner">
+          <div class="header-left">
+            <a class="brand" href="${homeHref("#home")}" aria-label="Millennia World School home">
+              <img src="../../Assets/image.svg" alt="Millennia World School" />
+            </a>
+
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-navigation"
+              aria-label="Open navigation"
+              data-nav-toggle
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <nav class="primary-nav" id="primary-navigation" data-nav>
+              <ul>
+                <li><a class="${active("home")}" href="${homeHref("#home")}">Home</a></li>
+                <li class="nav-dropdown">
+                  <a class="${active("kindergarten", "elementary", "juniorHigh", "kurikulum")}" href="${homeHref("#academics")}">Academics</a>
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    aria-label="Open academics menu"
+                    aria-expanded="false"
+                    data-dropdown-toggle
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="${active("kindergarten")}" href="kindergarten.html">Kindergarten</a></li>
+                    <li><a class="${active("elementary")}" href="elementary.html">Elementary</a></li>
+                    <li><a class="${active("juniorHigh")}" href="juniorHigh.html">Junior High</a></li>
+                    <li><a class="${active("kurikulum")}" href="kurikulum.html">Curriculum</a></li>
+                  </ul>
+                </li>
+                <li><a class="${active("aboutUs")}" href="aboutUs.html">About us</a></li>
+                <li><a class="${active("schoolCalendar")}" href="schoolCalendar.html">School calendar</a></li>
+                <li><a class="${active("news", "newsDetail")}" href="news.html">News</a></li>
+                <li><a class="${active("contact")}" href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <a class="header-cta motion-hover-lift" href="contact.html">Book a Tour</a>
+        </div>
+      </header>
+    `;
+  };
+
+  const renderFooter = () => {
+    const target = document.querySelector("[data-footer]");
+    if (!target) return;
+
+    target.outerHTML = `
+      <footer class="site-footer" data-footer>
+        <div class="section-shell footer-grid">
+          <div class="footer-brand">
+            <a class="footer-logo" href="${homeHref("#home")}" aria-label="Millennia World School home">
+              <img src="../../Assets/image.svg" alt="Millennia World School" />
+            </a>
+            <p>
+              Millennia World School supports curious learners through caring
+              guidance, meaningful academics, and a warm international-minded
+              community.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h2>Explore</h2>
+            <a href="aboutUs.html">About us</a>
+            <a href="${homeHref("#academics")}">Academics</a>
+            <a href="${homeHref("#environment")}">Campus environment</a>
+            <a href="${homeHref("#community")}">Community stories</a>
+          </div>
+
+          <div class="footer-links">
+            <h2>Programs</h2>
+            <a href="kindergarten.html">Kindergarten</a>
+            <a href="elementary.html">Elementary</a>
+            <a href="juniorHigh.html">Junior High</a>
+            <a href="kurikulum.html">Curriculum</a>
+          </div>
+
+          <div class="footer-contact">
+            <h2>Contact</h2>
+            <p>
+              Jl. Merpati Raya No. 103<br />
+              Sawah Lama, Ciputat, Tangerang Selatan, Banten 15413
+            </p>
+            <a href="mailto:info@millennia21.id">info@millennia21.id</a>
+            <a href="contact.html" class="footer-cta">Book a Tour</a>
+          </div>
+        </div>
+
+        <div class="section-shell footer-bottom">
+          <p>© 2026 Millennia World School. All rights reserved.</p>
+          <div>
+            <a href="${homeHref("#home")}">Back to top</a>
+          </div>
+        </div>
+      </footer>
+    `;
+  };
+
+  renderHeader();
+  renderFooter();
+
   const header = document.querySelector("[data-header]");
   const navToggle = document.querySelector("[data-nav-toggle]");
   const dropdownToggle = document.querySelector("[data-dropdown-toggle]");
