@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Chemistry for Children and Teenagers — Interactive science workshop and hands-on learning at Millennia World School." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Nunito+Sans:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/Styles.css" />
+  <link rel="stylesheet" href="../styles/News.css" />
+  <script src="../components.js" defer></script>
+
+  <title>Chemistry for Children and Teenagers | Millennia World School</title>
+</head>
+
+<body data-page="newsDetail">
+  <div data-header></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="news-hero" aria-labelledby="page-title">
+      <div class="news-hero-media">
+        <img src="https://millenniaws.sch.id/wp-content/uploads/2021/11/Millennia-World-School-Building-768x511.jpg"
+          alt="Millennia World School news article" />
+      </div>
+      <div class="news-hero-overlay"></div>
+      <div class="section-shell news-hero-content motion-fade-up">
+        <p class="news-kicker">Article Detail</p>
+        <h1 id="page-title">School news</h1>
+        <p>Latest updates, activities, and stories from Millennia World School.</p>
+      </div>
+      <div class="news-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+          <path d="M0,62 C180,132 340,12 530,68 C720,124 882,38 1080,76 C1250,108 1360,86 1440,48 L1440,140 L0,140 Z" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Main Layout Container (Detail Article + Sidebar) -->
+    <section class="blog-section" aria-label="News article detail section">
+      <div class="section-shell">
+        <div class="blog-layout-container">
+          <!-- Left Column: Single Article Content -->
+          <article class="single-post-content motion-fade-up">
+            <!-- Post Header Meta -->
+            <div class="post-meta">
+              <span class="badge badge-chemistry">Chemistry</span>
+              <span class="post-date">December 10, 2026</span>
+              <span class="post-author">by <strong>MWS Team</strong></span>
+            </div>
+
+            <h1 class="single-post-title">Chemistry for Children and Teenagers</h1>
+
+            <!-- Featured Image -->
+            <div class="single-hero-img">
+              <img src="../../Assets/activity-chemistry.jpg" alt="Chemistry hands-on workshop for students" />
+            </div>
+
+            <!-- Body Text Artikel -->
+            <div class="article-body">
+              <p class="lead-text">
+                There are many different school classes, ranging from basic required courses to elective "passion
+                projects." Practical science and chemical experiments provide students with unique insights into how the
+                physical world operates.
+              </p>
+
+              <p>
+                At Millennia World School, we believe that early exposure to interactive science fosters critical
+                thinking, problem-solving skills, and a lifelong passion for discovery. During our hands-on chemistry
+                sessions, students engage in safe, age-appropriate laboratory practices guided by experienced mentors.
+              </p>
+
+              <blockquote>
+                "Science is not just a subject in a textbook; it is a mindset of questioning, experimenting, and
+                understanding the world around us."
+              </blockquote>
+
+              <h3>Key Highlights of the Workshop</h3>
+              <p>
+                Students had the opportunity to explore safe chemical reactions, learn about molecular structures
+                through visual models, and practice safety protocols in a modern lab setup:
+              </p>
+
+              <ul class="article-list">
+                <li><strong>Interactive Safety Protocols:</strong> Understanding chemical labels and protective
+                  equipment.</li>
+                <li><strong>Acid &amp; Base Indicators:</strong> Experimenting with natural plant-based indicators.</li>
+                <li><strong>Molecular Model Building:</strong> Hands-on creation of basic water and carbon molecules.
+                </li>
+              </ul>
+
+              <p>
+                The event concluded with a student showcase where young participants presented their mini-experiments to
+                parents and peers, demonstrating incredible enthusiasm and confidence.
+              </p>
+            </div>
+
+            <!-- Post Footer: Tags & Share -->
+            <div class="single-post-footer">
+              <div class="post-tags">
+                <span>Tags:</span>
+                <a href="#">Science</a>
+                <a href="#">Chemistry</a>
+                <a href="#">Workshop</a>
+              </div>
+              <div class="post-share">
+                <span>Share:</span>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">WhatsApp</a>
+              </div>
+            </div>
+
+            <!-- Post Navigation (Prev / Next Article) -->
+            <div class="post-navigation">
+              <a href="news.html" class="nav-prev">
+                <span class="nav-label">← Previous Post</span>
+                <span class="nav-title">Extracurricular Activities for Schoolchildren</span>
+              </a>
+              <a href="news.html" class="nav-next">
+                <span class="nav-label">Next Post →</span>
+                <span class="nav-title">Importance of Healthy Food at School</span>
+              </a>
+            </div>
+
+            <!-- Comments Section -->
+            <section class="comments-section" aria-labelledby="comments-heading">
+              <h3 class="comments-title" id="comments-heading">Leave a Reply</h3>
+              <form class="comment-form" action="#" method="post" id="comment-form">
+                <div class="form-group-row">
+                  <input type="text" placeholder="Your Name *" required aria-label="Your Name" />
+                  <input type="email" placeholder="Your Email *" required aria-label="Your Email" />
+                </div>
+                <textarea rows="5" placeholder="Your Comment *" required aria-label="Your Comment"></textarea>
+                <button type="submit" class="btn-submit-comment">POST COMMENT</button>
+              </form>
+            </section>
+          </article>
+
+          <!-- Right Column: Sidebar -->
+          <aside class="blog-sidebar">
+            <!-- Search Widget -->
+            <div class="widget widget-search motion-fade-up">
+              <form class="search-form" action="#" method="get" id="detail-search-form">
+                <input type="text" placeholder="Enter keywords..." name="s" id="detail-search-input"
+                  aria-label="Search news" />
+                <button type="submit" aria-label="Submit search">🔍</button>
+              </form>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="widget widget-categories motion-fade-up motion-delay-100">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="widget-list">
+                <li>
+                  <a href="#">Activities <span>(12)</span></a>
+                </li>
+                <li>
+                  <a href="#">Academics <span>(8)</span></a>
+                </li>
+                <li>
+                  <a href="#">School Events <span>(5)</span></a>
+                </li>
+                <li>
+                  <a href="#">Achievements <span>(3)</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Schedule / Information Widget -->
+            <div class="widget widget-schedule motion-fade-up motion-delay-200">
+              <h3 class="widget-title">Schedule Highlights</h3>
+              <div class="schedule-item">
+                <strong class="subject">English Club</strong>
+                <span class="day">Tuesday</span>
+                <span class="time">9:00 am - 10:00 am</span>
+              </div>
+              <div class="schedule-item">
+                <strong class="subject">Athletics &amp; Sports</strong>
+                <span class="day">Tuesday</span>
+                <span class="time">10:00 am - 11:00 am</span>
+              </div>
+            </div>
+
+            <!-- Recent Posts Widget -->
+            <div class="widget widget-recent-posts motion-fade-up motion-delay-300">
+              <h3 class="widget-title">Recent Updates</h3>
+              <ul class="recent-list">
+                <li>
+                  <a href="newsDetail.html">Chemistry for Children and Teenagers</a>
+                  <span class="date">Dec 10, 2026</span>
+                </li>
+                <li>
+                  <a href="newsDetail.html">Extracurricular Activities for Schoolchildren</a>
+                  <span class="date">Nov 28, 2026</span>
+                </li>
+                <li>
+                  <a href="newsDetail.html">Importance of Healthy Food at School</a>
+                  <span class="date">Nov 15, 2026</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-section" id="tour">
+      <div class="section-shell">
+        <div class="tour-banner">
+          <h2 class="tour-title">Visit Millennia World School</h2>
+
+          <div class="tour-bottom">
+            <a href="#" class="tour-btn"> Book a Personalized Tour </a>
+
+            <p class="tour-description">
+              Visit our campus, meet our admissions team, explore classrooms,
+              and experience how students learn and grow every day at
+              Millennia World School.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+</body>
+
+</html>

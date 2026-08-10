@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Millennia World School — Where curiosity finds its first language</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <script src="../components.js" defer></script>
+
+  <div data-header></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+
+      <div class="hero-slide active" data-index="0">
+        <img src="../../AssetsMWS/_DSC4760.jpg" alt="Children collaborating on a classroom activity">
+      </div>
+      <div class="hero-slide" data-index="1">
+        <img src="../../AssetsMWS/Elementary.jpg" alt="Students walking through a sunlit campus courtyard">
+      </div>
+      <div class="hero-slide" data-index="2">
+        <img src="../../AssetsMWS/DSC04079.jpg" alt="View of the school's campus architecture">
+      </div>
+
+      <div class="hero-scrim"></div>
+
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <p class="hero-eyebrow" id="hero-eyebrow">Millennia World School</p>
+          <h1 id="hero-headline">Where curiosity finds its first language.</h1>
+          <p id="hero-caption">An international school for preschool through junior high, built around a single idea: a
+            child's world should grow larger every day.</p>
+        </div>
+      </div>
+
+      <div class="hero-nav" role="tablist" aria-label="Hero slides">
+        <button class="active" data-slide="0" aria-label="Slide 1"></button>
+        <button data-slide="1" aria-label="Slide 2"></button>
+        <button data-slide="2" aria-label="Slide 3"></button>
+      </div>
+
+      <button class="hero-arrow prev" aria-label="Previous slide">&#8249;</button>
+      <button class="hero-arrow next" aria-label="Next slide">&#8250;</button>
+
+      <div class="hero-scroll-cue">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+
+    <!-- PHILOSOPHY -->
+
+    <section class="philosophy reveal">
+      <!-- Shape khusus nempel di pojok viewport -->
+      <span class="shape shape-tl" aria-hidden="true"></span>
+      <span class="shape shape-tr" aria-hidden="true"></span>
+      <span class="shape shape-bl" aria-hidden="true"></span>
+      <span class="shape shape-br" aria-hidden="true"></span>
+
+      <div class="wrap">
+        <p>At MWS, Lorem ipsum dlor apnet, what do you mean oooo, what o you mean yeeee, nicki minaz jusinnn, show you
+          up, indonesiaaa merah darah ku</p>
+      </div>
+    </section>
+
+    <!-- ADMISSIONS & INFORMATION (TAXONOMY FILTER) -->
+    <section class="info-section reveal" id="info-section">
+      
+      <!-- Header tetep di tengah (pake wrap) -->
+      <div class="wrap">
+        <div class="info-header">
+          <h2>Everything you need to know about joining MWS.</h2>
+        </div>
+
+        <!-- Taxonomy Filter Bar + Nav Controls -->
+        <div class="taxonomy-bar">
+          <div class="filter-nav" role="tablist" aria-label="Information categories">
+            <button class="filter-btn active" data-filter="admissions" role="tab" aria-selected="true">Admissions</button>
+            <button class="filter-btn" data-filter="campuses" role="tab" aria-selected="false">Campuses</button>
+            <button class="filter-btn" data-filter="academic" role="tab" aria-selected="false">Academic</button>
+            <button class="filter-btn" data-filter="news" role="tab" aria-selected="false">News</button>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn" aria-label="Previous Slide">&#8249;</button>
+            <button class="slider-btn next-btn" aria-label="Next Slide">&#8250;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider ditaruh DI LUAR .wrap biar FULL BLEED ke pinggir layar -->
+      <div class="holderBoxes">
+        <div class="holderBoxesContent">
+          <div class="slickList">
+            <div class="slick-track">
+
+              <div class="holderBox" data-category="admissions">
+                <div class="innerBox">
+                  <picture><img src="../../AssetsMWS/_DSC4760.jpg" alt="MWS Admissions"></picture>
+                  <div class="boxOverlay"></div>
+                  <div class="boxContent">
+                    <span class="boxTag">Enrollment</span>
+                    <h3 class="boxTitle">How to Apply</h3>
+                    <p class="boxDesc">Step-by-step admissions journey from registration to first day.</p>
+                    <a href="#" class="boxLink">Start Application <span>&rarr;</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="holderBox" data-category="campuses">
+                <div class="innerBox">
+                  <picture><img src="../../AssetsMWS/Elementary.jpg" alt="MWS Campus"></picture>
+                  <div class="boxOverlay"></div>
+                  <div class="boxContent">
+                    <span class="boxTag">Campus Tour</span>
+                    <h3 class="boxTitle">Sunlit Classrooms</h3>
+                    <p class="boxDesc">Schedule a morning tour to observe daily student activities.</p>
+                    <a href="#" class="boxLink">Book a Tour <span>&rarr;</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="holderBox" data-category="academic">
+                <div class="innerBox">
+                  <picture><img src="../../AssetsMWS/DSC04079.jpg" alt="MWS Academic"></picture>
+                  <div class="boxOverlay"></div>
+                  <div class="boxContent">
+                    <span class="boxTag">Curriculum</span>
+                    <h3 class="boxTitle">Inquiry Learning</h3>
+                    <p class="boxDesc">Dual-language framework designed to build critical thinking.</p>
+                    <a href="#" class="boxLink">Explore Programs <span>&rarr;</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="holderBox" data-category="news">
+                <div class="innerBox">
+                  <picture><img src="../../AssetsMWS/_DSC4760.jpg" alt="MWS News"></picture>
+                  <div class="boxOverlay"></div>
+                  <div class="boxContent">
+                    <span class="boxTag">News</span>
+                    <h3 class="boxTitle">STEAM Exhibition</h3>
+                    <p class="boxDesc">See how students collaborated on sustainable solution projects.</p>
+                    <a href="#" class="boxLink">Read Story <span>&rarr;</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tambah 1-2 kotak lagi biar keliatan ngintip di pinggir kanan -->
+              <div class="holderBox" data-category="admissions">
+                <div class="innerBox">
+                  <picture><img src="../../AssetsMWS/Elementary.jpg" alt="MWS Admissions"></picture>
+                  <div class="boxOverlay"></div>
+                  <div class="boxContent">
+                    <span class="boxTag">Tuition</span>
+                    <h3 class="boxTitle">Tuition &amp; Fees</h3>
+                    <p class="boxDesc">Transparent guidelines regarding tuition and payment options.</p>
+                    <a href="#" class="boxLink">View Fees <span>&rarr;</span></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFFILIATIONS -->
+    <section class="affiliations wrap reveal">
+      <div class="affiliations-head">
+        <h2>Global partners in learning.</h2>
+        <p>MWS collaborates with recognized international networks to bring world-class standards and broader perspectives to our everyday curriculum</p>
+      </div>
+
+      <div class="affiliations-marquee">
+        <div class="marquee-track">
+
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/CharterForCompassion.jpg"
+              alt="Charter for Compassion">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/ClimateChangeSchool.jpg"
+              alt="School of Excellence Climate Action Project">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/ClimateActionProject.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/CommonSenseEducation.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/ResponsiveClassroom.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/iEran.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/Climate-Action.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/EraseMeanness.jpg" alt="Empatico">
+          </div>
+          <div class="logo-item">
+            <img src="https://millenniaws.sch.id/wp-content/uploads/2023/11/Empatico.jpg" alt="Empatico">
+          </div>
+          <!-- Tambah logo mitra lainnya kalau ada -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPUS SPOTLIGHT (FULL WIDTH SLIDER) -->
+    <section class="campus-spotlight reveal" id="campus-spotlight">
+      <div class="spotlight-slider">
+        
+        <!-- Track Slide -->
+        <div class="spotlight-track">
+          
+          <!-- Slide 1 -->
+          <div class="spotlight-slide active">
+            <picture>
+              <img src="../../AssetsMWS/_DSC4760.jpg" alt="Campus Life at MWS">
+            </picture>
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-caption">
+              <blockquote>
+                "Every day at MWS is designed to expand a child’s world — through hands-on discovery, lifelong friendships, and joyful learning."
+              </blockquote>
+              <cite>Campus Life at Millennia World School</cite>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="spotlight-slide">
+            <picture>
+              <img src="../../AssetsMWS/Elementary.jpg" alt="Inquiry & Culture at MWS">
+            </picture>
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-caption">
+              <blockquote>
+                "Where cultural heritage meets global perspectives, nurturing proud, compassionate, and confident young leaders."
+              </blockquote>
+              <cite>Student Life &amp; Culture</cite>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="spotlight-slide">
+            <picture>
+              <img src="../../AssetsMWS/DSC04079.jpg" alt="Learning Environment">
+            </picture>
+            <div class="spotlight-overlay"></div>
+            <div class="spotlight-caption">
+              <blockquote>
+                "A sunlit campus built to inspire curiosity, collaboration, and a lifelong love for exploration."
+              </blockquote>
+              <cite>Our Learning Spaces</cite>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tombol Navigation Controls (Prev & Next Minimalis) -->
+        <button class="spotlight-arrow prev" aria-label="Previous photo">&#8249;</button>
+        <button class="spotlight-arrow next" aria-label="Next photo">&#8250;</button>
+
+      </div>
+    </section>
+
+    <!-- COMMUNITY VOICES -->
+    <section class="community-voices wrap reveal" id="community-voices">
+      <div class="community-header">
+        <h2>Voices of our community.</h2>
+        <p>Real stories from the students, parents, and educators who call MWS home.</p>
+      </div>
+
+      <!-- Grid 4 Card Showoff -->
+      <div class="voices-grid">
+        
+        <!-- Card 1: Student -->
+        <article class="voice-card" data-video="../assets/videos/student-story.mp4" data-role="Student" data-name="Kianna A." data-grade="Grade 7 Student" data-quote="MWS gave me the confidence to speak up in front of people and explore my love for science projects.">
+          <div class="voice-media">
+            <img src="../../AssetsMWS/_DSC4760.jpg" alt="Student Voice">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="voice-info">
+            <span class="voice-role">Student</span>
+            <h3 class="voice-name">Kianna A.</h3>
+          </div>
+        </article>
+
+        <!-- Card 2: Parent -->
+        <article class="voice-card" data-video="../assets/videos/parent-story.mp4" data-role="Parent" data-name="Sarah &amp; David M." data-grade="Parents of Grade 2 &amp; 5" data-quote="Finding a school that values character as much as academics was essential for us. MWS exceeds every expectation.">
+          <div class="voice-media">
+            <img src="../../AssetsMWS/Elementary.jpg" alt="Parent Voice">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="voice-info">
+            <span class="voice-role">Parent</span>
+            <h3 class="voice-name">Sarah &amp; David M.</h3>
+          </div>
+        </article>
+
+        <!-- Card 3: Teacher -->
+        <article class="voice-card" data-video="../assets/videos/teacher-story.mp4" data-role="Educator" data-name="Mr. Hendra" data-grade="Primary Homeroom Teacher" data-quote="Teaching here means watching children transform from curious thinkers into independent, compassionate leaders.">
+          <div class="voice-media">
+            <img src="../../AssetsMWS/DSC04079.jpg" alt="Teacher Voice">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="voice-info">
+            <span class="voice-role">Teacher</span>
+            <h3 class="voice-name">Mr. Hendra</h3>
+          </div>
+        </article>
+
+        <!-- Card 4: Alumni / Staff -->
+        <article class="voice-card" data-video="../assets/videos/staff-story.mp4" data-role="Staff" data-name="Ms. Maya" data-grade="Head of Student Care" data-quote="Every child is known by name and supported individually so they feel safe to grow at their own pace.">
+          <div class="voice-media">
+            <img src="../../AssetsMWS/_DSC4760.jpg" alt="Staff Voice">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="voice-info">
+            <span class="voice-role">Staff</span>
+            <h3 class="voice-name">Ms. Maya</h3>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Link ke Full Page Community Stories -->
+      <div class="community-footer-link">
+        <a href="#more-stories" class="btn-secondary">Read all community stories <span>&rarr;</span></a>
+      </div>
+    </section>
+
+    <!-- MODAL POPUP (Video 9:16 Kiri + Caption & Nama Kanan) -->
+    <div class="voice-modal" id="voiceModal" aria-hidden="true">
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        
+        <div class="modal-body">
+          <!-- Sisi Kiri: Video 9:16 -->
+          <div class="modal-video-wrapper">
+            <video id="modalVideo" controls playsinline loop>
+              <source src="" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Sisi Kanan: Caption & Info -->
+          <div class="modal-caption-wrapper">
+            <span class="modal-role" id="modalRole">Role</span>
+            <blockquote id="modalQuote">"Quote text goes here..."</blockquote>
+            <div class="modal-author">
+              <h4 id="modalName">Author Name</h4>
+              <p id="modalGrade">Sub-info / Grade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div data-footer></div>
+
+  <div class="chatbot">
+    <button class="chatbot-toggle" type="button" aria-label="Open chatbot">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3a9 9 0 0 0-9 9 8.9 8.9 0 0 0 2.2 5.9L4 21l3.3-1.2A9 9 0 1 0 12 3z" />
+      </svg>
+      <span>Ask MWS AI</span>
+    </button>
+    <div class="chatbot-panel">
+      <div class="chatbot-header">
+        <h3>MWS AI</h3>
+      </div>
+      <div class="chatbot-body">
+        <p>Hi 👋</p>
+        <p>Ask me anything about Millennia World School.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

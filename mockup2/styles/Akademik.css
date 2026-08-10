@@ -278,7 +278,7 @@
   margin: 0;
 
   font-family: var(--font-quote);
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-style: italic;
   font-weight: 500;
   line-height: 1.5;

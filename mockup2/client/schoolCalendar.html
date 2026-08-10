@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="School calendar for Millennia World School events, admissions, and community activities."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Nunito+Sans:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/Styles.css" />
+    <link rel="stylesheet" href="../styles/Calendar.css" />
+    <script src="../components.js" defer></script>
+
+    <title>School Calendar | Millennia World School</title>
+  </head>
+  <body data-page="schoolCalendar">
+    <div data-header></div>
+
+    <main>
+      <section
+        class="calendar-hero"
+        aria-labelledby="page-title"
+      >
+        <div class="calendar-hero-media">
+          <img
+            src="https://millenniaws.sch.id/wp-content/uploads/2021/11/Millennia-World-School-Building-768x511.jpg"
+            alt="Millennia World School campus"
+          />
+        </div>
+        <div class="calendar-hero-overlay"></div>
+        <div class="section-shell calendar-hero-content motion-fade-up">
+          <p class="calendar-kicker">Plan with us</p>
+          <h1 id="page-title">School calendar</h1>
+          <p>
+            Keep track of Millennia World School events, admissions activities,
+            parent meetings, and student programs throughout the academic year.
+          </p>
+        </div>
+        <div class="calendar-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+            <path
+              d="M0,62 C180,132 340,12 530,68 C720,124 882,38 1080,76 C1250,108 1360,86 1440,48 L1440,140 L0,140 Z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <section class="calendar-section" aria-label="School calendar events">
+        <div class="section-shell">
+          <div class="calendar-controls motion-fade-up">
+            <div class="filter-group" role="group" aria-label="Filter events">
+              <button class="filter-btn active" type="button">All events</button>
+              <button class="filter-btn" type="button">Academic</button>
+              <button class="filter-btn" type="button">Holidays</button>
+              <button class="filter-btn" type="button">Parents &amp; community</button>
+            </div>
+            <div class="term-select">
+              <span>Academic year: <strong>2026/2027</strong></span>
+            </div>
+          </div>
+
+          <div class="calendar-layout-grid">
+            <aside class="calendar-widget-card motion-fade-up">
+              <div class="widget-header">
+                <button class="month-nav-btn" type="button" aria-label="Previous month">
+                  &lt;
+                </button>
+                <h2>August 2026</h2>
+                <button class="month-nav-btn" type="button" aria-label="Next month">
+                  &gt;
+                </button>
+              </div>
+
+              <div class="calendar-days-header" aria-hidden="true">
+                <span>Su</span>
+                <span>Mo</span>
+                <span>Tu</span>
+                <span>We</span>
+                <span>Th</span>
+                <span>Fr</span>
+                <span>Sa</span>
+              </div>
+
+              <div class="calendar-dates-grid">
+                <span class="day-num inactive">26</span>
+                <span class="day-num inactive">27</span>
+                <span class="day-num inactive">28</span>
+                <span class="day-num inactive">29</span>
+                <span class="day-num inactive">30</span>
+                <span class="day-num inactive">31</span>
+
+                <span class="day-num">1</span>
+                <span class="day-num">2</span>
+                <span class="day-num">3</span>
+                <span class="day-num">4</span>
+                <span class="day-num">5</span>
+                <span class="day-num">6</span>
+                <span class="day-num">7</span>
+                <span class="day-num">8</span>
+                <span class="day-num">9</span>
+                <span class="day-num active has-event" title="Orientation Week">10</span>
+                <span class="day-num">11</span>
+                <span class="day-num">12</span>
+                <span class="day-num">13</span>
+                <span class="day-num">14</span>
+                <span class="day-num">15</span>
+                <span class="day-num">16</span>
+                <span class="day-num has-event" title="Independence Day">17</span>
+                <span class="day-num">18</span>
+                <span class="day-num">19</span>
+                <span class="day-num">20</span>
+                <span class="day-num">21</span>
+                <span class="day-num">22</span>
+                <span class="day-num">23</span>
+                <span class="day-num">24</span>
+                <span class="day-num">25</span>
+                <span class="day-num">26</span>
+                <span class="day-num">27</span>
+                <span class="day-num">28</span>
+                <span class="day-num">29</span>
+                <span class="day-num">30</span>
+                <span class="day-num">31</span>
+              </div>
+
+              <div class="calendar-legend">
+                <span class="legend-item">
+                  <i class="dot dot-event"></i> Has event
+                </span>
+                <span class="legend-item">
+                  <i class="dot dot-active"></i> Selected
+                </span>
+              </div>
+            </aside>
+
+            <div class="events-list">
+              <article class="event-card motion-fade-up motion-hover-lift">
+                <div class="event-date">
+                  <span class="day">10</span>
+                  <span class="month">Aug</span>
+                </div>
+                <div class="event-details">
+                  <span class="badge badge-academic">Academic</span>
+                  <h3>Primary school orientation week</h3>
+                  <p>
+                    Orientation program welcoming new primary students to MWS
+                    campus life and environment.
+                  </p>
+                  <span class="event-time">
+                    08:00 AM – 12:00 PM · Main hall
+                  </span>
+                </div>
+              </article>
+
+              <article class="event-card motion-fade-up motion-delay-100 motion-hover-lift">
+                <div class="event-date">
+                  <span class="day">17</span>
+                  <span class="month">Aug</span>
+                </div>
+                <div class="event-details">
+                  <span class="badge badge-holiday">Holiday</span>
+                  <h3>Independence day celebration</h3>
+                  <p>
+                    National holiday and student flag ceremony followed by
+                    traditional games.
+                  </p>
+                  <span class="event-time">
+                    All day · School field
+                  </span>
+                </div>
+              </article>
+
+              <article class="event-card motion-fade-up motion-delay-200 motion-hover-lift">
+                <div class="event-date">
+                  <span class="day">05</span>
+                  <span class="month">Sep</span>
+                </div>
+                <div class="event-details">
+                  <span class="badge badge-parent">Parents</span>
+                  <h3>Parent teacher meeting (PTM)</h3>
+                  <p>
+                    Discussion on student learning progress and term goals with
+                    homeroom teachers.
+                  </p>
+                  <span class="event-time">
+                    09:00 AM – 02:00 PM · Classrooms
+                  </span>
+                </div>
+              </article>
+
+              <article class="event-card motion-fade-up motion-delay-300 motion-hover-lift">
+                <div class="event-date">
+                  <span class="day">17</span>
+                  <span class="month">Oct</span>
+                </div>
+                <div class="event-details">
+                  <span class="badge badge-academic">Academic</span>
+                  <h3>Millennia student showcase &amp; learning exhibition</h3>
+                  <p>
+                    Interactive student project showcase celebrating creativity,
+                    innovation, and leadership.
+                  </p>
+                  <span class="event-time">
+                    09:00 AM – 03:00 PM · Exhibition center
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour-section" id="tour" aria-labelledby="tour-title">
+        <div class="section-shell">
+          <div class="tour-banner motion-fade-up">
+            <h2 class="tour-title" id="tour-title">Visit Millennia World School</h2>
+            <div class="tour-bottom">
+              <a href="contact.html" class="tour-btn motion-hover-lift">
+                Book a personalized tour
+              </a>
+              <p class="tour-description">
+                Visit our campus, meet our admissions team, and see how each
+                division supports students through the school day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

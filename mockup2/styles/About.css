@@ -1,235 +1,313 @@
-.about-section {
-  padding: 160px 0;
-}
+/* =========================================
+   About Us Page — Mockup 2
+   ========================================= */
 
-.about-layout {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 100px;
-  align-items: end;
-}
-
-.about-copy {
-  display: grid;
-  gap: 70px;
-}
-
-.about-copy h2 {
-  font-size: clamp(3rem, 5vw, 5.8rem);
-
-  line-height: 0.95;
-
-  max-width: 420px;
-}
-
-.about-body {
-  margin-left: 80px;
-
-  display: grid;
-  gap: 26px;
-}
-
-.about-body p {
-  max-width: 420px;
-
-  color: rgba(36, 23, 24, 0.68);
-}
-
-.about-image {
+.about-hero {
   position: relative;
+  display: grid;
+  min-height: 72vh;
+  align-items: center;
+  overflow: hidden;
+  padding: 150px 0 130px;
+  background: var(--color-charcoal);
 }
 
-.about-image img {
-  width: 100%;
-  height: 760px;
-  object-fit: cover;
-}
-
-.about-image::before {
-  content: "";
-
+.about-hero-media,
+.about-hero-overlay {
   position: absolute;
-
-  left: -70px;
-  top: 70px;
-
-  width: 120px;
-  height: 1px;
-
-  background: #b88a3b;
+  inset: 0;
 }
 
-.quote-section {
-  padding: 180px 0;
-
-  text-align: center;
+.about-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.quote-section blockquote {
-  font-family: var(--font-quote);
-
-  font-size: clamp(2.6rem, 5vw, 5rem);
-
-  font-style: italic;
-
-  line-height: 1.35;
-
-  max-width: 900px;
-
-  margin: auto;
+.about-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(36, 23, 24, 0.88), rgba(36, 23, 24, 0.48) 58%, rgba(36, 23, 24, 0.16)),
+    linear-gradient(0deg, rgba(126, 21, 24, 0.26), rgba(126, 21, 24, 0.08));
 }
 
-.story-section {
-  padding: 120px 0;
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+}
 
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(126, 21, 24, 0.92);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.about-hero-content h1 {
+  max-width: 760px;
+  margin-top: 14px;
+  color: var(--color-white);
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.about-hero-content > p {
+  max-width: 620px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.about-wave {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: 3;
+  height: 116px;
+  color: var(--color-white);
+}
+
+.about-wave svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.about-block {
+  padding: 88px 0;
+}
+
+.about-block-background {
+  background: var(--color-white);
+}
+
+.about-block-mission {
   background: var(--color-surface);
 }
 
-.story-layout {
+.about-block-vision {
+  background: var(--color-white);
+}
+
+.about-block-philosophy {
+  background: var(--color-surface);
+}
+
+.about-block-values {
+  padding-bottom: 96px;
+  background: var(--color-white);
+}
+
+.about-block-grid {
   display: grid;
-
-  grid-template-columns: 0.9fr 1.1fr;
-
-  gap: 90px;
-
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
   align-items: center;
 }
 
-.story-copy {
-  display: grid;
-
-  gap: 24px;
+.about-block-media {
+  margin: 0;
 }
 
-.story-copy p {
-  color: rgba(36, 23, 24, 0.72);
-}
-
-.story-image img {
+.about-block-media img {
   width: 100%;
-
-  height: 720px;
-
+  height: min(520px, 68vh);
+  border-radius: 18px;
   object-fit: cover;
+  box-shadow: var(--shadow-soft);
 }
 
-.image-break {
-  height: 80vh;
-
-  overflow: hidden;
+.about-block-copy h2,
+.about-statement-card h2,
+.about-philosophy-copy h2,
+.about-values-heading h2 {
+  color: var(--color-burgundy);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-.image-break img {
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
+.about-philosophy-copy h2 {
+  text-transform: none;
 }
 
-.vision-section {
-  padding: 120px 0;
-}
-
-.vision-layout {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 100px;
-
-  align-items: start;
-}
-
-.vision-layout p:last-child {
+.about-block-copy p,
+.about-statement-card p,
+.about-philosophy-copy p,
+.about-values-heading p {
   color: rgba(36, 23, 24, 0.72);
+  line-height: 1.65;
 }
 
-.values-section {
-  padding: 120px 0;
+.about-block-copy p + p,
+.about-statement-card p + p,
+.about-philosophy-copy p + p {
+  margin-top: 16px;
 }
 
-.values-list {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  column-gap: 90px;
-
-  row-gap: 70px;
-}
-
-.values-list h3 {
-  margin-bottom: 16px;
-
-  padding-bottom: 12px;
-
-  border-bottom: 2px solid var(--color-gold);
-
-  display: inline-block;
-}
-
-.values-list p {
-  max-width: 360px;
-
-  color: rgba(36, 23, 24, 0.72);
-}
-
-.numbers-section {
-  padding: 140px 0;
-}
-
-.numbers {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 40px;
-
+.about-statement-card {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
   text-align: center;
 }
 
-.numbers span {
-  display: block;
-
-  font-size: 5rem;
-
-  font-family: var(--font-heading);
-
-  font-weight: 800;
-
-  color: var(--color-burgundy);
-
-  line-height: 1;
+.about-block-mission .about-statement-card {
+  border-top: 4px solid var(--color-gold);
 }
 
-.numbers p {
+.about-statement-card-accent {
+  border: 1px solid rgba(126, 21, 24, 0.2);
+  background:
+    linear-gradient(145deg, rgba(126, 21, 24, 0.97), rgba(85, 12, 18, 0.97));
+  box-shadow: var(--shadow-soft);
+}
+
+.about-statement-card-accent h2 {
+  color: var(--color-gold);
+}
+
+.about-statement-card-accent p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-philosophy-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-philosophy-media {
+  margin: 0;
+}
+
+.about-philosophy-media img {
+  width: 100%;
+  height: min(480px, 62vh);
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+.about-values-heading {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.about-values-heading p {
   margin-top: 14px;
-
-  font-size: 1rem;
-
-  letter-spacing: 0.08em;
-
-  text-transform: uppercase;
-
-  color: rgba(36, 23, 24, 0.6);
 }
 
-@media (max-width: 900px) {
-  .about-layout,
-  .story-layout,
-  .vision-layout,
-  .values-list,
-  .numbers {
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.value-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 12px;
+  padding: 24px 20px 26px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.value-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.value-card-integrity .value-accent {
+  background: var(--color-burgundy);
+}
+
+.value-card-compassion .value-accent {
+  background: var(--color-rose);
+}
+
+.value-card-innovation .value-accent {
+  background: var(--color-navy);
+}
+
+.value-card-excellence .value-accent {
+  background: var(--color-gold);
+}
+
+.value-card h3 {
+  margin-top: 6px;
+  font-size: 1.08rem;
+}
+
+.value-card p {
+  color: rgba(36, 23, 24, 0.68);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .about-block-grid,
+  .about-philosophy-layout {
     grid-template-columns: 1fr;
   }
 
-  .about-image img,
-  .story-image img {
-    height: 420px;
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .image-break {
-    height: 420px;
+  .about-block-media img,
+  .about-philosophy-media img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    min-height: auto;
+    padding: 120px 0 100px;
+  }
+
+  .about-block {
+    padding: 72px 0;
+  }
+
+  .about-statement-card {
+    padding: 28px 22px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }
