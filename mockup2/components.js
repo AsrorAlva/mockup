@@ -34,7 +34,7 @@
               <ul>
                 <li><a class="${active("home")}" href="${homeHref("#home")}">Home</a></li>
                 <li class="nav-dropdown">
-                  <a class="${active("kindergarten", "elementary", "juniorHigh", "kurikulum")}" href="${homeHref("#academics")}">Academics</a>
+                  <a class="${active("kindergarten", "elementary", "juniorHigh", "kurikulum")}" href="kurikulum.html">Academics</a>
                   <button
                     class="dropdown-toggle"
                     type="button"

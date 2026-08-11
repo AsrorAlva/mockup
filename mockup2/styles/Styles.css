@@ -8,8 +8,8 @@
   --color-navy: #1f2a44;
   --color-sky: #b8ddf8;
   --color-surface: #fff8f2;
-  --color-placeholder: #d8dbe1;
-  --color-placeholder-dark: #aeb4bf;
+  --color-placeholder: rgba(36, 23, 24, 0.10);
+  --color-placeholder-dark: rgba(126, 21, 24, 0.16);
   --color-border: rgba(126, 21, 24, 0.13);
   --shadow-soft: 0 20px 55px rgba(36, 23, 24, 0.12);
   --shadow-card: 0 14px 36px rgba(36, 23, 24, 0.1);
@@ -170,7 +170,7 @@ h3 {
   width: 100%;
   place-items: center;
   overflow: hidden;
-  border: 1px solid #c4c9d3;
+  border: 1px solid var(--color-border);
   background:
     linear-gradient(
         135deg,
@@ -185,7 +185,7 @@ h3 {
       var(--color-placeholder),
       var(--color-placeholder-dark)
     );
-  color: #5e6674;
+  color: var(--color-charcoal-muted, rgba(36, 23, 24, 0.68));
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
@@ -202,7 +202,13 @@ h3 {
   padding: 9px 15px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 8px 18px rgba(36, 52, 91, 0.08);
+  box-shadow: 0 8px 18px rgba(36, 23, 24, 0.08);
+}
+
+.media-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Header */
@@ -809,7 +815,7 @@ h3 {
 
 .community-section {
   padding: 0 0 108px;
-  background: #fbf8f7;
+  background: var(--color-surface);
 }
 
 .community-quote-band {
@@ -877,7 +883,7 @@ h3 {
 
 .community-heading {
   margin: 0 0 48px;
-  color: #5b141d;
+  color: var(--color-burgundy);
   font-family: var(--font-quote);
   font-size: clamp(2.15rem, 4vw, 3.15rem);
   font-weight: 700;
@@ -1041,8 +1047,8 @@ h3 {
 
 .story-btn:hover,
 .story-btn:focus-visible {
-  background: #f4e4e1;
-  color: #4b1018;
+  background: rgba(185, 74, 78, 0.16);
+  color: var(--color-burgundy);
   transform: translateY(-1px);
 }
 
@@ -1283,7 +1289,7 @@ h3 {
   border-radius: 150px 5px 150px 5px;
   padding: 55px 70px;
   color: var(--color-white);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(36, 23, 24, 0.15);
 }
 
 .tour-title {
@@ -1370,10 +1376,10 @@ h3 {
   padding: 14px 22px;
   border: none;
   border-radius: 999px;
-  background: #681724;
-  color: #fff;
+  background: var(--color-burgundy);
+  color: var(--color-white);
   cursor: pointer;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 15px 35px rgba(36, 23, 24, 0.18);
   transition: 0.3s;
 }
 
@@ -1391,17 +1397,17 @@ h3 {
 
 .chatbot-panel {
   width: 340px;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(36, 23, 24, 0.2);
   display: none;
 }
 
 .chatbot-header {
   padding: 18px 22px;
-  background: #681724;
-  color: #fff;
+  background: var(--color-burgundy);
+  color: var(--color-white);
 }
 
 .chatbot-body {

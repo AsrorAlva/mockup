@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions — Millennia World School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <script src="../components.js" defer></script>
+
+  <div data-header></div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <img src="../../AssetsMWS/_DSC4760.jpg" alt="MWS Enrollment & Inquiry">
+      <div class="subpage-hero-scrim"></div>
+      <div class="subpage-hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Admissions</span>
+        </div>
+        <h1>Admissions</h1>
+      </div>
+    </section>
+
+    <!-- Content & Form Grid -->
+    <section class="subpage-section">
+      <div class="wrap">
+        <div class="subpage-grid-2">
+          
+          <!-- Left Column: Guide and Fees -->
+          <div class="subpage-body">
+            <p class="subpage-intro">
+              Welcome to the beginning of your child’s educational journey at Millennia World School. We accept applications throughout the academic year.
+            </p>
+            
+            <h2>How to Apply</h2>
+            <p>We make our enrollment process as transparent and simple as possible to help families make informed decisions about their children's futures.</p>
+            
+            <ul class="premium-list">
+              <li class="premium-list-item">
+                <div class="premium-list-title">1. Schedule a Tour & Inquiry</div>
+                <p>Visit our Ciputat campus, observe classes in action, and meet our academic leaders. You can book via the form on the right.</p>
+              </li>
+              <li class="premium-list-item">
+                <div class="premium-list-title">2. Registration & Assessment</div>
+                <p>Submit registration documents and arrange an assessment date. For early years, this is a soft observation session. For older kids, a fundamental review is administered.</p>
+              </li>
+              <li class="premium-list-item">
+                <div class="premium-list-title">3. Interview & Decision</div>
+                <p>A friendly chat with parents to align values, followed by admission decision and placement confirmation within 5 business days.</p>
+              </li>
+              <li class="premium-list-item">
+                <div class="premium-list-title">4. Enrollment & Welcome</div>
+                <p>Complete fee payments, obtain school uniforms, and attend our student orientation day.</p>
+              </li>
+            </ul>
+
+            <h2>Tuition & Fees</h2>
+            <p>Our fees are structured to cover international curriculum assessments, classroom tools, and all academic workshops.</p>
+
+            <div class="premium-table-wrapper">
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>Age Range</th>
+                    <th>Enrollment Fee (One-Time)</th>
+                    <th>Term Fee (Per Term)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Kindergarten</strong></td>
+                    <td>2 - 6 Years</td>
+                    <td>Rp 99.999.999</td>
+                    <td>Rp 99.999.999</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Elementary</strong></td>
+                    <td>6 - 12 Years</td>
+                    <td>Rp 99.999.999</td>
+                    <td>Rp 99.999.999</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Junior High</strong></td>
+                    <td>12 - 15 Years</td>
+                    <td>Rp 99.999.999</td>
+                    <td>Rp 99.999.999</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <p style="font-size: 14px; color: var(--charcoal-muted); font-style: italic;">
+              * Note: Term fees cover textbook lending, student project materials, and local field trips. Annual developmental fees apply. Contact admissions for details on siblings discounts.
+            </p>
+          </div>
+
+          <!-- Right Column: Inquiry Form -->
+          <div>
+            <form class="premium-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your tour inquiry has been submitted. Our team will contact you shortly.');">
+              <h3 style="margin-top: 0; margin-bottom: 24px; border-bottom: 2px solid var(--burgundy); padding-bottom: 12px;">Book a Tour / Inquiry</h3>
+              
+              <div class="form-group">
+                <label for="parentName">Parent's Full Name</label>
+                <input type="text" id="parentName" class="form-control" placeholder="e.g. Sarah Connor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="e.g. sarah@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Phone Number (WhatsApp)</label>
+                <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +62 812-3456-7890" required>
+              </div>
+
+              <div class="form-group">
+                <label for="childLevel">Grade of Interest</label>
+                <select id="childLevel" class="form-control" required>
+                  <option value="" disabled selected>Select level...</option>
+                  <option value="kindergarten">Kindergarten (Age 2 - 6)</option>
+                  <option value="elementary">Elementary (Age 6 - 12)</option>
+                  <option value="junior-high">Junior High (Age 12 - 15)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="tourDate">Preferred Tour Date</label>
+                <input type="date" id="tourDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="inquiryMessage">Questions / Special Notes</label>
+                <textarea id="inquiryMessage" class="form-control" placeholder="Any specific questions regarding enrollment or schedule?"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Submit Inquiry</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="subpage-section" style="background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
+      <div class="wrap" style="max-width: 800px;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+        
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-trigger">
+              What curriculum is taught at MWS?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>We blend the Cambridge International Curriculum (English, Math, Science) with the Indonesian National Curriculum requirements, delivered through an inquiry-led, student-centered framework.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              When can we enroll our child?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Millennia World School accepts students year-round, subject to seat availability in the respective grade. However, we highly recommend registering before the start of the academic term in July.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              Are there trials or transition support for new students?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>Yes! We offer single-day classroom trials where prospective students can sit in, meet teachers, and experience the learning rhythm. Homeroom teachers provide tailored transition support for new joiners.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              Is there a school bus or catering service?
+              <span>+</span>
+            </button>
+            <div class="faq-content">
+              <p>We partner with trusted third-party catering providers offering healthy, nutritionally balanced lunch options. Bus transportation routes cover select areas of Ciputat, Bintaro, and Pamulang.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-footer></div>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
 | **Burgundy** | `--color-burgundy` | `#7E1518` | Primary identity, main actions, headings, official moments |
 | **White** | `--color-white` | `#FFFFFF` | Main surfaces and readable space |
 | **Gold** | `--color-gold` | `#D6A13A` | Highlights, milestones, joyful accents |
-| **Charcoal** | `--color-charcoal` | `#241718` | Main text instead of pure black |
+| **  ** | `--color-charcoal` | `#241718` | Main text instead of pure black |
 
 ### Secondary Contextual Colors
 | Color Name | Token Name | Hex Code | Intended Usage |

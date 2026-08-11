@@ -20,41 +20,44 @@
 .sub-heading {
   display: inline-block;
   margin-bottom: 12px;
-  color: #79c973;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
 .level-intro-text h2 {
-  color: #2d3995;
-  font-family: "Noto Serif KR", Georgia, serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 34px;
   line-height: 1.3;
 }
 
 .level-intro-text p {
   margin-top: 16px;
-  color: #687186;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 16px;
   line-height: 1.7;
 }
 
-.placeholder-img-lg {
+.level-image {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 2px dashed #cbd5e1;
   border-radius: 16px;
-  background-color: #e2e8f0;
-  color: #64748b;
-  font-family: "Dosis", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+}
+
+.level-image img,
+.gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 2. Pillars Section */
@@ -70,16 +73,16 @@
 
 .pillar-card {
   padding: 32px 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(36, 23, 24, 0.14);
   border-radius: 16px;
-  background-color: #f8fafc;
+  background-color: #FAF8F3;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pillar-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(36, 23, 24, 0.05);
 }
 
 .pillar-icon {
@@ -90,21 +93,21 @@
   height: 60px;
   margin-bottom: 20px;
   border-radius: 50%;
-  background-color: rgba(241, 67, 75, 0.08);
-  color: #F1434B;
+  background-color: rgba(126, 21, 24, 0.08);
+  color: var(--mws-charcoal);
 }
 
 .pillar-card h3 {
-  color: #2d3995;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 22px;
   font-weight: 800;
 }
 
 .pillar-card p {
   margin-top: 10px;
-  color: #687186;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 15px;
   line-height: 1.6;
 }
@@ -113,14 +116,14 @@
 .level-navigation {
   padding: 40px;
   border-radius: 16px;
-  background-color: #f1f5f9;
+  background-color: #FAF8F3;
   text-align: center;
 }
 
 .level-navigation h3 {
   margin-bottom: 20px;
-  color: #2d3995;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 22px;
   font-weight: 800;
 }
@@ -134,11 +137,11 @@
 
 .nav-btn {
   padding: 10px 24px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid rgba(36, 23, 24, 0.18);
   border-radius: 20px;
   background-color: #fff;
-  color: #2d3995;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
@@ -147,8 +150,8 @@
 
 .nav-btn.active,
 .nav-btn:hover {
-  border-color: #2d3995;
-  background-color: #2d3995;
+  border-color: var(--mws-burgundy);
+  background-color: var(--mws-burgundy);
   color: #fff;
 }
 
@@ -177,16 +180,16 @@
 }
 
 .gallery-highlight-section .section-heading h2 {
-  color: #2d3995;
-  font-family: "Noto Serif KR", Georgia, serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 32px;
   font-weight: 700;
 }
 
 .gallery-highlight-section .section-heading p {
   margin-top: 12px;
-  color: #687186;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 16px;
 }
 
@@ -201,28 +204,23 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background-color: #f8fafc;
+  background-color: #FAF8F3;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 20px rgba(36, 23, 24, 0.08);
 }
 
-.placeholder-img-gallery {
+.gallery-image {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 2px dashed #cbd5e1;
   border-radius: 12px 12px 0 0;
-  background-color: #e2e8f0;
-  color: #64748b;
-  font-family: "Dosis", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
   text-align: center;
   padding: 10px;
 }
@@ -230,7 +228,7 @@
 /* Keterangan foto di bawah gambar */
 .gallery-caption {
   padding: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(36, 23, 24, 0.14);
   border-top: none;
   border-radius: 0 0 12px 12px;
   background-color: #fff;
@@ -238,8 +236,8 @@
 }
 
 .gallery-caption h4 {
-  color: #2d3995;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 16px;
   font-weight: 800;
 }
@@ -284,8 +282,8 @@
 
 .curriculum-overview-copy h2,
 .assessment-intro h2 {
-  color: #2d3995;
-  font-family: "Noto Serif KR", Georgia, serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 44px;
   font-weight: 700;
   line-height: 1.28;
@@ -296,8 +294,8 @@
 .section-heading p {
   max-width: 760px;
   margin-top: 18px;
-  color: #687186;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 16px;
   line-height: 1.75;
 }
@@ -307,7 +305,7 @@
   overflow: hidden;
   padding: 44px 38px 42px;
   border-radius: 8px;
-  background: #2d3995;
+  background: #7E1518;
   color: #fff;
 }
 
@@ -319,7 +317,7 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: #79c973;
+  background: #6F8B6A;
   opacity: 0.78;
 }
 
@@ -327,11 +325,11 @@
 .curriculum-overview-panel span {
   position: relative;
   z-index: 1;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--mws-font-body);
 }
 
 .curriculum-overview-panel p {
-  color: #e6ecff;
+  color: var(--mws-charcoal);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -342,7 +340,7 @@
   position: relative;
   z-index: 1;
   margin: 22px 0 46px;
-  font-family: "Noto Serif KR", Georgia, serif;
+  font-family: var(--mws-font-heading);
   font-size: 30px;
   font-weight: 700;
   line-height: 1.38;
@@ -378,7 +376,7 @@
 .curriculum-pathways article {
   min-height: 300px;
   padding: 34px 30px 32px;
-  border-left: 1px solid #dedede;
+  border-left: 1px solid rgba(36, 23, 24, 0.14);
 }
 
 .curriculum-pathways article:first-child {
@@ -388,7 +386,7 @@
 .curriculum-pathways span {
   display: block;
   margin-bottom: 22px;
-  color: #d1504e;
+  color: var(--mws-charcoal);
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
@@ -398,7 +396,7 @@
 .curriculum-principles h3,
 .journey-step h3,
 .assessment-card h3 {
-  color: #2d3995;
+  color: var(--mws-charcoal);
   font-size: 24px;
   font-weight: 800;
   line-height: 1.28;
@@ -410,8 +408,8 @@
 .assessment-desc,
 .assessment-list li {
   margin-top: 15px;
-  color: #687186;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 15px;
   line-height: 1.68;
 }
@@ -419,7 +417,7 @@
 .curriculum-principles {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 54px;
-  border: 1px solid #e5e8ef;
+  border: 1px solid rgba(36, 23, 24, 0.14);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -427,7 +425,7 @@
 .curriculum-principles article {
   min-height: 240px;
   padding: 36px 34px;
-  border-left: 1px solid #e5e8ef;
+  border-left: 1px solid rgba(36, 23, 24, 0.14);
 }
 
 .curriculum-principles article:first-child {
@@ -442,7 +440,7 @@
 .journey-step {
   min-height: 250px;
   padding: 36px 34px;
-  border-left: 1px solid #dedede;
+  border-left: 1px solid rgba(36, 23, 24, 0.14);
 }
 
 .journey-step:first-child {
@@ -453,8 +451,8 @@
 .type-tag {
   display: inline-flex;
   margin-bottom: 18px;
-  color: #79c973;
-  font-family: "Dosis", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -469,21 +467,21 @@
   align-items: center;
   padding: 72px 64px;
   border-radius: 8px;
-  background: #f7f8fb;
+  background: #FAF8F3;
 }
 
 .assessment-quote {
   position: relative;
   padding: 46px 44px 46px 54px;
-  border-left: 6px solid #d1504e;
+  border-left: 6px solid #B94A4E;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 14px 34px rgba(36, 52, 91, 0.08);
+  box-shadow: 0 14px 34px rgba(36, 23, 24, 0.08);
 }
 
 .assessment-quote p {
-  color: #2d3995;
-  font-family: "Noto Serif KR", Georgia, serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-heading);
   font-size: 27px;
   font-weight: 700;
   line-height: 1.55;
@@ -497,12 +495,12 @@
 .assessment-card {
   min-height: 360px;
   padding: 38px 34px 36px;
-  border: 1px solid #e3e6ee;
+  border: 1px solid rgba(36, 23, 24, 0.14);
   border-radius: 8px;
 }
 
 .tag-blue {
-  color: #69aaf4;
+  color: var(--mws-charcoal);
 }
 
 .assessment-list {
@@ -519,7 +517,7 @@
 .sustainable-section {
   padding: 74px 64px 76px;
   border-radius: 8px;
-  background: #2d3995;
+  background: #7E1518;
 }
 
 .sustainable-section .section-heading h2,
@@ -535,8 +533,8 @@
 }
 
 .sustainable-content p {
-  color: #e6ecff;
-  font-family: "Quicksand", sans-serif;
+  color: var(--mws-charcoal);
+  font-family: var(--mws-font-body);
   font-size: 16px;
   line-height: 1.75;
 }
@@ -555,9 +553,9 @@
   align-items: center;
   padding: 10px 22px;
   border-radius: 30px;
-  background-color: #2d3995;
+  background-color: var(--mws-burgundy);
   color: #ffffff;
-  font-family: "Dosis", sans-serif;
+  font-family: var(--mws-font-heading);
   font-size: 15px;
   font-weight: 800;
   line-height: 1;
@@ -599,7 +597,7 @@
   .curriculum-principles article,
   .journey-step {
     border-left: 0;
-    border-top: 1px solid #e5e8ef;
+    border-top: 1px solid rgba(36, 23, 24, 0.14);
   }
 
   .curriculum-principles article:first-child,
@@ -634,7 +632,7 @@
   .curriculum-pathways article {
     min-height: auto;
     border-left: 0;
-    border-top: 1px solid #dedede;
+    border-top: 1px solid rgba(36, 23, 24, 0.14);
   }
 
   .curriculum-pathways article:first-child {

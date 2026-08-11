@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics — Millennia World School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <style>
+    .acad-pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .acad-pillar {
+      background: var(--white);
+      padding: 36px 32px;
+      border-left: 4px solid transparent;
+    }
+    .acad-pillar.ac-navy    { border-left-color: var(--navy); }
+    .acad-pillar.ac-burgundy { border-left-color: var(--burgundy); }
+    .acad-pillar.ac-gold    { border-left-color: var(--gold); }
+    .acad-pillar.ac-sage    { border-left-color: var(--sage); }
+    .acad-pillar.ac-rose    { border-left-color: var(--rose); }
+    .acad-pillar.ac-sky     { border-left-color: var(--sky); }
+    .acad-pillar h3 {
+      font-size: 20px; margin-bottom: 10px; margin-top: 0;
+    }
+    .acad-pillar p { font-size: 14px; color: var(--charcoal-muted); line-height: 1.6; margin: 0; }
+    .acad-pillar-tag {
+      display: inline-block;
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+    .ac-navy .acad-pillar-tag    { background: var(--navy); }
+    .ac-burgundy .acad-pillar-tag { background: var(--burgundy); }
+    .ac-gold .acad-pillar-tag    { background: var(--gold); color: var(--charcoal); }
+    .ac-sage .acad-pillar-tag    { background: var(--sage); }
+    .ac-rose .acad-pillar-tag    { background: var(--rose); }
+    .ac-sky .acad-pillar-tag     { background: var(--navy); }
+
+    .acad-pathway {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 760px) {
+      .acad-pathway { grid-template-columns: 1fr; }
+    }
+    .acad-pathway-item {
+      padding: 40px 36px;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .acad-pathway-item:last-child { border-right: none; }
+    .acad-pathway-age {
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--burgundy);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .acad-pathway-item h3 { font-size: 24px; margin-bottom: 12px; }
+    .acad-pathway-item p  { font-size: 14px; color: var(--charcoal-muted); line-height: 1.6; margin-bottom: 20px; }
+    .acad-pathway-accent {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--burgundy);
+    }
+  </style>
+</head>
+<body>
+
+  <script src="../components.js" defer></script>
+  <div data-header></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <img src="../../AssetsMWS/DSC09500.jpg" alt="MWS Academic Programs">
+      <div class="subpage-hero-scrim"></div>
+      <div class="subpage-hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Academics</span>
+        </div>
+        <h1>Academics</h1>
+      </div>
+    </section>
+
+    <!-- Philosophy Intro -->
+    <section class="subpage-section" id="academic-overview">
+      <div class="wrap">
+        <div class="subpage-grid-2">
+          <div class="subpage-body">
+            <p class="subpage-intro">
+              Learning at MWS is not passive. It is an active, inquiry-led experience where every child is treated as a capable and curious thinker.
+            </p>
+            <p>
+              Our academic ecosystem integrates the Cambridge International Curriculum with the Indonesian National framework, delivering both internationally recognised standards and a deep appreciation for local identity and values. Rather than teaching subjects in isolation, we design learning experiences that cross disciplines and connect academic rigour with real-world relevance.
+            </p>
+            <p>
+              We assess progress through evidence of learning, collaborative projects, self-reflection, and measured milestones — not simply through tests. Our goal is to build confident, independent learners who carry their skills far beyond the classroom.
+            </p>
+            <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="kurikulum.html" class="btn-submit" style="display:inline-block;width:auto;padding:14px 28px;text-decoration:none;">View Curriculum</a>
+              <a href="school-calendar.html" style="display:inline-block;padding:13px 28px;border:1px solid var(--charcoal);font-family:var(--f-head);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;color:var(--charcoal);transition:background 0.3s,color 0.3s;" onmouseover="this.style.background='var(--charcoal)';this.style.color='var(--white)'" onmouseout="this.style.background='';this.style.color='var(--charcoal)'">Academic Calendar</a>
+            </div>
+          </div>
+          <div>
+            <div style="background:var(--navy);color:var(--white);padding:40px;">
+              <h3 style="color:var(--white);margin-top:0;margin-bottom:20px;font-size:20px;">Academic At a Glance</h3>
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;color:rgba(255,255,255,0.85);">
+                <li style="padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.12);">
+                  <strong style="display:block;color:var(--white);margin-bottom:3px;">Curriculum Framework</strong>
+                  Cambridge International + Indonesian National
+                </li>
+                <li style="padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.12);">
+                  <strong style="display:block;color:var(--white);margin-bottom:3px;">Languages of Instruction</strong>
+                  English (primary) &amp; Bahasa Indonesia
+                </li>
+                <li style="padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.12);">
+                  <strong style="display:block;color:var(--white);margin-bottom:3px;">Learning Approach</strong>
+                  Inquiry-led, student-centred, project-based
+                </li>
+                <li>
+                  <strong style="display:block;color:var(--white);margin-bottom:3px;">Grade Levels</strong>
+                  Early Years · Primary · Secondary (Gr. 1–9)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Programs (Full-bleed class-card section) -->
+    <section class="classes-section" id="academic-programs">
+      <div class="section-shell">
+        <div class="section-heading">
+          <h2 id="classes-title">Learning Programs</h2>
+        </div>
+        <div class="class-grid">
+          <article class="class-card motion-hover-lift">
+            <div class="media-placeholder class-photo">
+              <img src="../../AssetsMWS/Kindergarten.jpg" alt="Kindergarten Program"/>
+            </div>
+            <div class="class-card-body">
+              <h3>Kindergarten</h3>
+              <span>Age 2 – 6</span>
+              <p>Sensory discovery, emergent literacy, and social-emotional confidence in purpose-built creative studios.</p>
+              <a class="text-link" href="kindergarten.html">Explore Program</a>
+            </div>
+          </article>
+          <article class="class-card motion-hover-lift">
+            <div class="media-placeholder class-photo">
+              <img src="../../AssetsMWS/Elementary.jpg" alt="Elementary Program"/>
+            </div>
+            <div class="class-card-body">
+              <h3>Elementary</h3>
+              <span>Age 6 – 12</span>
+              <p>Cross-disciplinary Units of Inquiry bridging rigorous academics with collaborative hands-on research.</p>
+              <a class="text-link" href="elementary.html">Explore Program</a>
+            </div>
+          </article>
+          <article class="class-card motion-hover-lift">
+            <div class="media-placeholder class-photo">
+              <img src="../../AssetsMWS/JH.jpg" alt="High School Pathway"/>
+            </div>
+            <div class="class-card-body">
+              <h3>High School</h3>
+              <span>Age 12 – 15</span>
+              <p>Academic independence, laboratory research, student leadership, and rigorous high-school preparation.</p>
+              <a class="text-link" href="high-school.html">Explore Program</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Ecosystem (Semantic colour pillars per Section 12 of guidelines) -->
+    <section class="subpage-section" id="academic-ecosystem">
+      <div class="wrap">
+        <h2 style="margin-bottom:12px;">Our Academic Ecosystem</h2>
+        <p style="color:var(--charcoal-muted);margin-bottom:40px;max-width:640px;">Each dimension of the MWS academic experience is supported by intentional structures, dedicated educators, and a clear semantic identity.</p>
+
+        <div class="acad-pillar-grid">
+
+          <div class="acad-pillar ac-navy" id="learning-assessment">
+            <span class="acad-pillar-tag">Curriculum</span>
+            <h3>Curriculum &amp; Learning</h3>
+            <p>A structured, evidence-informed curriculum pathway from Early Years through Secondary, aligned with Cambridge and National standards.</p>
+          </div>
+
+          <div class="acad-pillar ac-navy">
+            <span class="acad-pillar-tag">Assessment</span>
+            <h3>Assessment &amp; Reporting</h3>
+            <p>Learning is measured through formative and summative evidence: projects, presentations, portfolios, and reflective logs alongside formal assessments.</p>
+          </div>
+
+          <div class="acad-pillar ac-sage" id="academic-support">
+            <span class="acad-pillar-tag">Support</span>
+            <h3>Academic Support</h3>
+            <p>Dedicated learning support, intervention pathways, MTSS frameworks, and enrichment programmes to ensure every student is seen and served.</p>
+          </div>
+
+          <div class="acad-pillar ac-gold" id="student-development">
+            <span class="acad-pillar-tag">Milestone</span>
+            <h3>Student Development</h3>
+            <p>Leadership programmes, student councils, enrichment clubs, and personal development pathways cultivating agency and a growth mindset.</p>
+          </div>
+
+          <div class="acad-pillar ac-rose">
+            <span class="acad-pillar-tag">Wellbeing</span>
+            <h3>Student Wellbeing</h3>
+            <p>Social-emotional learning woven through the daily experience, guided by Responsive Classroom principles and compassion-focused community values.</p>
+          </div>
+
+          <div class="acad-pillar ac-burgundy">
+            <span class="acad-pillar-tag">Calendar</span>
+            <h3>Academic Calendar</h3>
+            <p>A structured term calendar communicating assessment periods, milestone events, reflection weeks, and key academic deadlines throughout the year.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Pathway Timeline (charcoal full-bleed) -->
+    <section class="subpage-section" style="background:var(--charcoal);color:var(--white);">
+      <div class="wrap">
+        <h2 style="color:var(--white);margin-bottom:12px;">The MWS Learning Pathway</h2>
+        <p style="color:rgba(250,248,243,0.65);margin-bottom:48px;max-width:600px;">One connected journey from a child's very first classroom experience to the threshold of high school, on a single campus.</p>
+        <div class="acad-pathway">
+          <div class="acad-pathway-item" style="background:rgba(255,255,255,0.04);">
+            <div class="acad-pathway-accent"></div>
+            <span class="acad-pathway-age">Age 2 – 6</span>
+            <h3 style="color:var(--white);">Early Years</h3>
+            <p style="color:rgba(250,248,243,0.7);">Play-based discovery, sensory mathematics, emergent literacy in both English and Bahasa Indonesia, and a nurturing introduction to school community.</p>
+            <a href="kindergarten.html" class="text-link" style="color:var(--gold);">Kindergarten Program</a>
+          </div>
+          <div class="acad-pathway-item" style="background:rgba(255,255,255,0.04);">
+            <div class="acad-pathway-accent"></div>
+            <span class="acad-pathway-age">Age 6 – 12</span>
+            <h3 style="color:var(--white);">Primary</h3>
+            <p style="color:rgba(250,248,243,0.7);">Units of Inquiry that cross disciplinary boundaries, rigorous Cambridge Mathematics and English pathways, and collaborative project exhibitions.</p>
+            <a href="elementary.html" class="text-link" style="color:var(--gold);">Elementary Program</a>
+          </div>
+          <div class="acad-pathway-item">
+            <div class="acad-pathway-accent"></div>
+            <span class="acad-pathway-age">Age 12 – 15</span>
+            <h3 style="color:var(--white);">Secondary</h3>
+            <p style="color:rgba(250,248,243,0.7);">Independent research, laboratory sciences, leadership roles, public presentation, and high-school alignment with strong bilingual academic rigour.</p>
+            <a href="high-school.html" class="text-link" style="color:var(--gold);">High School Pathway</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-footer></div>
+
+</body>
+</html>

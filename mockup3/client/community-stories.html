@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Stories — Millennia World School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <script src="../components.js" defer></script>
+
+  <div data-header></div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <img src="../../AssetsMWS/Elementary.jpg" alt="MWS School Community Stories">
+      <div class="subpage-hero-scrim"></div>
+      <div class="subpage-hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Community Stories</span>
+        </div>
+        <h1>Community Stories</h1>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="subpage-section">
+      <div class="wrap">
+        
+        <p class="lede" style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+          Hear directly from the students, parents, and educators who shape our community every day. Click any story card to play their video testimonial.
+        </p>
+
+        <!-- Testimonial Grid (matches home page voices-grid layout) -->
+        <div class="voices-grid">
+          
+          <!-- Card 1: Student -->
+          <article class="voice-card" data-poster="../../AssetsMWS/_DSC4760.jpg" data-role="Student"
+            data-name="Kianna A." data-grade="Grade 7 Student"
+            data-quote="MWS gave me the confidence to speak up in front of people and explore my love for science projects.">
+            <div class="voice-media">
+              <img src="../../AssetsMWS/_DSC4760.jpg" alt="Student Voice">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="voice-info">
+              <span class="voice-role">Student</span>
+              <h3 class="voice-name">Kianna A.</h3>
+            </div>
+          </article>
+
+          <!-- Card 2: Parent -->
+          <article class="voice-card" data-poster="../../AssetsMWS/Elementary.jpg" data-role="Parent"
+            data-name="Sarah &amp; David M." data-grade="Parents of Grade 2 &amp; 5"
+            data-quote="Finding a school that values character as much as academics was essential for us. MWS exceeds every expectation.">
+            <div class="voice-media">
+              <img src="../../AssetsMWS/Elementary.jpg" alt="Parent Voice">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="voice-info">
+              <span class="voice-role">Parent</span>
+              <h3 class="voice-name">Sarah &amp; David M.</h3>
+            </div>
+          </article>
+
+          <!-- Card 3: Teacher -->
+          <article class="voice-card" data-poster="../../AssetsMWS/DSC04079.jpg" data-role="Educator"
+            data-name="Mr. Hendra" data-grade="Primary Homeroom Teacher"
+            data-quote="Teaching here means watching children transform from curious thinkers into independent, compassionate leaders.">
+            <div class="voice-media">
+              <img src="../../AssetsMWS/DSC04079.jpg" alt="Teacher Voice">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="voice-info">
+              <span class="voice-role">Teacher</span>
+              <h3 class="voice-name">Mr. Hendra</h3>
+            </div>
+          </article>
+
+          <!-- Card 4: Staff -->
+          <article class="voice-card" data-poster="../../AssetsMWS/_DSC4760.jpg" data-role="Staff" data-name="Ms. Maya"
+            data-grade="Head of Student Care"
+            data-quote="Every child is known by name and supported individually so they feel safe to grow at their own pace.">
+            <div class="voice-media">
+              <img src="../../AssetsMWS/_DSC4760.jpg" alt="Staff Voice">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="voice-info">
+              <span class="voice-role">Staff</span>
+              <h3 class="voice-name">Ms. Maya</h3>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL POPUP (Video 9:16 Kiri + Caption & Nama Kanan) -->
+    <div class="voice-modal" id="voiceModal" aria-hidden="true">
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+
+        <div class="modal-body">
+          <!-- Sisi Kiri: Video 9:16 -->
+          <div class="modal-video-wrapper">
+            <video id="modalVideo" controls playsinline loop>
+            </video>
+          </div>
+
+          <!-- Sisi Kanan: Caption & Info -->
+          <div class="modal-caption-wrapper">
+            <span class="modal-role" id="modalRole">Role</span>
+            <blockquote id="modalQuote">"Quote text goes here..."</blockquote>
+            <div class="modal-author">
+              <h4 id="modalName">Author Name</h4>
+              <p id="modalGrade">Sub-info / Grade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div data-footer></div>
+
+</body>
+</html>

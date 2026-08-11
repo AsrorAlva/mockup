@@ -12,16 +12,6 @@
   const isActive = (target) => (page === target ? "active" : "");
   const pagesActive = page === "admission" ? "active" : "";
 
-  const homeItems = [
-    ["#section-1", "Facilities"],
-    ["#section-2", "About MWS"],
-    ["#section-3", "School News"],
-    ["#section-4", "School Video"],
-    ["#section-5", "Upcoming Events"],
-    ["#section-6", "FAQ"],
-    ["#section-7", "Affiliations"],
-    ["#section-8", "Mission Statement"],
-  ];
 
   const header = `
     <div class="header-container">
@@ -34,14 +24,7 @@
           <ul class="nav-menu">
             <li class="dropdown">
               <a class="${isHome ? "active" : ""}" href="${homeHref("#hero")}"${sectionLinkAttr}>HOME</a>
-              <ul class="dropdown-menu">
-                ${homeItems
-                  .map(
-                    ([hash, label]) =>
-                      `<li><a href="${homeHref(hash)}"${sectionLinkAttr}>${label}</a></li>`,
-                  )
-                  .join("")}
-              </ul>
+
             </li>
 
             <li class="dropdown">

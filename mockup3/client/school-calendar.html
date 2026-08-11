@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Calendar — Millennia World School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Calendar Page Styles ── */
+    .cal-page { padding: 100px 0; }
+
+    .cal-header { margin-bottom: 48px; }
+    .cal-header h2 { font-size: clamp(30px, 3.5vw, 44px); margin-bottom: 12px; }
+    .cal-header p { color: var(--charcoal-muted); font-size: 17px; }
+
+    .cal-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .cal-layout { grid-template-columns: 1fr; }
+    }
+
+    /* ── Calendar Grid ── */
+    .cal-grid-wrap { border: 1px solid var(--border); background: var(--white); }
+
+    .cal-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--burgundy);
+      color: var(--white);
+    }
+    .cal-nav h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      font-family: var(--f-head);
+    }
+    .cal-nav-btn {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      width: 34px; height: 34px;
+      border-radius: 0;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
+    }
+    .cal-nav-btn:hover { background: rgba(255,255,255,0.28); }
+
+    .cal-today-btn {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 0;
+      font-family: var(--f-head);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cal-today-btn:hover { background: rgba(255,255,255,0.28); }
+
+    .cal-dow {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      border-bottom: 1px solid var(--border);
+    }
+    .cal-dow span {
+      text-align: center;
+      padding: 12px 4px;
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charcoal-muted);
+    }
+
+    .cal-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+    .cal-day {
+      min-height: 86px;
+      padding: 10px 10px 8px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      cursor: default;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .cal-day:nth-child(7n) { border-right: none; }
+    .cal-day.other-month { background: var(--warm-white); }
+    .cal-day.other-month .cal-day-num { color: var(--charcoal-muted); opacity: 0.4; }
+    .cal-day.today .cal-day-num {
+      background: var(--burgundy);
+      color: var(--white);
+      width: 26px; height: 26px;
+      border-radius: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cal-day.has-event { cursor: pointer; }
+    .cal-day.has-event:hover { background: rgba(126, 21, 24, 0.04); }
+    .cal-day.selected { background: rgba(126, 21, 24, 0.06); }
+
+    .cal-day-num {
+      font-family: var(--f-head);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .cal-event-dot {
+      display: block;
+      font-size: 10px;
+      font-family: var(--f-head);
+      font-weight: 600;
+      padding: 2px 5px;
+      margin-bottom: 2px;
+      border-radius: 0;
+      color: var(--white);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .cal-event-dot.type-academic   { background: var(--navy); }
+    .cal-event-dot.type-school     { background: var(--burgundy); }
+    .cal-event-dot.type-milestone  { background: var(--gold); color: var(--charcoal); }
+    .cal-event-dot.type-holiday    { background: var(--sage); }
+    .cal-event-dot.type-wellbeing  { background: var(--rose); }
+
+    /* ── Legend ── */
+    .cal-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      padding: 16px 24px;
+      border-top: 1px solid var(--border);
+      background: var(--warm-white);
+    }
+    .cal-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--f-head);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charcoal-muted);
+    }
+    .cal-legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    /* ── Event Detail Panel ── */
+    .cal-detail-panel {
+      border: 1px solid var(--border);
+      background: var(--white);
+      position: sticky;
+      top: 100px;
+    }
+    .cal-detail-header {
+      padding: 20px 24px;
+      background: var(--charcoal);
+      color: var(--white);
+    }
+    .cal-detail-header h3 {
+      color: var(--white);
+      font-size: 15px;
+      font-family: var(--f-head);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .cal-detail-body { padding: 24px; }
+    .cal-detail-empty {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--charcoal-muted);
+      font-size: 14px;
+    }
+    .cal-event-card {
+      padding: 20px;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      border-left: 4px solid var(--burgundy);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cal-event-card:last-child { margin-bottom: 0; }
+    .cal-event-card:hover { transform: translateX(4px); }
+    .cal-event-card.type-academic   { border-left-color: var(--navy); }
+    .cal-event-card.type-school     { border-left-color: var(--burgundy); }
+    .cal-event-card.type-milestone  { border-left-color: var(--gold); }
+    .cal-event-card.type-holiday    { border-left-color: var(--sage); }
+    .cal-event-card.type-wellbeing  { border-left-color: var(--rose); }
+
+    .cal-event-card-type {
+      font-family: var(--f-head);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .cal-event-card.type-academic   .cal-event-card-type { color: var(--navy); }
+    .cal-event-card.type-school     .cal-event-card-type { color: var(--burgundy); }
+    .cal-event-card.type-milestone  .cal-event-card-type { color: var(--gold); }
+    .cal-event-card.type-holiday    .cal-event-card-type { color: var(--sage); }
+    .cal-event-card.type-wellbeing  .cal-event-card-type { color: var(--rose); }
+
+    .cal-event-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+      font-family: var(--f-head);
+    }
+    .cal-event-card p {
+      font-size: 13px;
+      color: var(--charcoal-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .cal-event-card-meta {
+      font-size: 12px;
+      color: var(--charcoal-muted);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <script src="../components.js" defer></script>
+  <div data-header></div>
+
+  <main>
+    <section class="subpage-hero">
+      <img src="../../AssetsMWS/DSC05350.jpg" alt="MWS Upcoming Events">
+      <div class="subpage-hero-scrim"></div>
+      <div class="subpage-hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>School Calendar</span>
+        </div>
+        <h1>School Calendar</h1>
+      </div>
+    </section>
+
+    <section class="cal-page">
+      <div class="wrap">
+        <div class="cal-header">
+          <h2>Important Dates &amp; Events</h2>
+          <p>View terms, assessments, school events, milestones, and holiday breaks for Academic Year 2026/2027.</p>
+        </div>
+
+        <div class="cal-layout">
+
+          <!-- Calendar Grid -->
+          <div>
+            <div class="cal-grid-wrap">
+              <div class="cal-nav">
+                <button class="cal-nav-btn" id="prevMonth" aria-label="Previous month">&#8249;</button>
+                <div style="display:flex;align-items:center;gap:16px;">
+                  <h3 id="calMonthYear">August 2026</h3>
+                  <button class="cal-today-btn" id="todayBtn">Today</button>
+                </div>
+                <button class="cal-nav-btn" id="nextMonth" aria-label="Next month">&#8250;</button>
+              </div>
+
+              <div class="cal-dow">
+                <span>Mon</span><span>Tue</span><span>Wed</span>
+                <span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+
+              <div class="cal-days" id="calDays"></div>
+
+              <div class="cal-legend">
+                <div class="cal-legend-item">
+                  <div class="cal-legend-dot" style="background:var(--navy)"></div> Academic
+                </div>
+                <div class="cal-legend-item">
+                  <div class="cal-legend-dot" style="background:var(--burgundy)"></div> School Event
+                </div>
+                <div class="cal-legend-item">
+                  <div class="cal-legend-dot" style="background:var(--gold)"></div> Milestone
+                </div>
+                <div class="cal-legend-item">
+                  <div class="cal-legend-dot" style="background:var(--sage)"></div> Holiday
+                </div>
+                <div class="cal-legend-item">
+                  <div class="cal-legend-dot" style="background:var(--rose)"></div> Wellbeing
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail Panel -->
+          <div class="cal-detail-panel">
+            <div class="cal-detail-header">
+              <h3 id="calDetailTitle">Select a date</h3>
+            </div>
+            <div class="cal-detail-body" id="calDetailBody">
+              <div class="cal-detail-empty">Click on a highlighted date to view event details.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script>
+    // ── Event Data ──
+    const events = {
+      "2026-07-14": [{ type:"school", title:"First Day of Academic Year 2026/2027", desc:"Welcome back! Homeroom assemblies, material distribution, and whole-school orientation.", time:"07:30 AM", location:"Main Campus" }],
+      "2026-07-20": [{ type:"wellbeing", title:"New Student & Family Welcome Breakfast", desc:"A warm community gathering for new families to meet homeroom teachers and student buddies.", time:"08:00 AM", location:"School Garden" }],
+      "2026-08-17": [{ type:"school", title:"Independence Day Flag Ceremony", desc:"Annual national flag ceremony followed by traditional Indonesian games and cultural food bazaar.", time:"07:00 AM", location:"School Field" }],
+      "2026-09-07": [{ type:"wellbeing", title:"Compassion Week Kickoff", desc:"Week-long school-wide activities promoting empathy, active listening, and community service.", time:"All Week", location:"All Classrooms" }],
+      "2026-09-21": [{ type:"academic", title:"Mid-Term Assessments Begin", desc:"Formative project presentations and assessments across Elementary and High School pathway classes.", time:"08:00 AM", location:"Respective Classrooms" }],
+      "2026-09-25": [{ type:"academic", title:"Mid-Term Assessments End", desc:"Final day of mid-term assessments. Results shared with parents within 5 business days.", time:"02:30 PM", location:"Respective Classrooms" }],
+      "2026-10-16": [{ type:"milestone", title:"STEAM & Eco-Action Exhibition 2026", desc:"Students showcase cross-disciplinary science, technology, art, and environmental projects.", time:"09:00 AM – 12:00 PM", location:"Main Hall & Garden Studios" }],
+      "2026-11-01": [{ type:"academic", title:"Academic Reports Distributed", desc:"Term 1 academic progress reports sent home. Parent consultation schedule opens.", time:"", location:"" }],
+      "2026-12-05": [{ type:"academic", title:"End-of-Term Assessments Begin", desc:"Summative assessments across all grade levels for Term 1.", time:"08:00 AM", location:"Respective Classrooms" }],
+      "2026-12-19": [{ type:"school", title:"Year-End Assembly & Awards", desc:"Annual celebration honoring student achievements, milestones, and community contributions.", time:"08:00 AM", location:"Main Hall" }],
+      "2026-12-21": [{ type:"holiday", title:"Term 1 Break Begins", desc:"School campus closed for holiday break. Classes resume on January 5, 2027.", time:"", location:"" }],
+      "2027-01-05": [{ type:"school", title:"Term 2 Begins", desc:"Welcome back for Term 2. Homeroom orientation and new unit introductions.", time:"07:30 AM", location:"Main Campus" }],
+    };
+
+    const typeLabel = { academic:"Academic", school:"School Event", milestone:"Milestone", holiday:"Holiday", wellbeing:"Wellbeing / SEL" };
+
+    let currentDate = new Date();
+    let selectedDate = null;
+
+    function padZ(n) { return String(n).padStart(2,"0"); }
+    function dateKey(y,m,d) { return `${y}-${padZ(m+1)}-${padZ(d)}`; }
+
+    function buildCalendar(year, month) {
+      const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      document.getElementById("calMonthYear").textContent = `${monthNames[month]} ${year}`;
+
+      const today = new Date();
+      const firstDay = new Date(year, month, 1).getDay(); // 0=Sun
+      // adjust so Monday is first
+      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const daysInPrev  = new Date(year, month, 0).getDate();
+
+      const container = document.getElementById("calDays");
+      container.innerHTML = "";
+
+      // Prev month tail
+      for (let i = startOffset - 1; i >= 0; i--) {
+        const d = daysInPrev - i;
+        const cell = document.createElement("div");
+        cell.className = "cal-day other-month";
+        cell.innerHTML = `<div class="cal-day-num">${d}</div>`;
+        container.appendChild(cell);
+      }
+
+      // Current month days
+      for (let d = 1; d <= daysInMonth; d++) {
+        const key = dateKey(year, month, d);
+        const isToday = (today.getFullYear()===year && today.getMonth()===month && today.getDate()===d);
+        const isSelected = (selectedDate === key);
+        const dayEvents = events[key] || [];
+
+        const cell = document.createElement("div");
+        cell.className = `cal-day${isToday ? " today" : ""}${dayEvents.length ? " has-event" : ""}${isSelected ? " selected" : ""}`;
+        cell.dataset.date = key;
+
+        let html = `<div class="cal-day-num">${d}</div>`;
+        dayEvents.forEach(ev => {
+          html += `<span class="cal-event-dot type-${ev.type}">${ev.title}</span>`;
+        });
+        cell.innerHTML = html;
+
+        if (dayEvents.length) {
+          cell.addEventListener("click", () => selectDate(key, d, month, year, dayEvents));
+        }
+        container.appendChild(cell);
+      }
+
+      // Next month head
+      const totalCells = startOffset + daysInMonth;
+      const remaining = (7 - (totalCells % 7)) % 7;
+      for (let d = 1; d <= remaining; d++) {
+        const cell = document.createElement("div");
+        cell.className = "cal-day other-month";
+        cell.innerHTML = `<div class="cal-day-num">${d}</div>`;
+        container.appendChild(cell);
+      }
+    }
+
+    function selectDate(key, d, month, year, dayEvents) {
+      selectedDate = key;
+      buildCalendar(year, month);
+
+      const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      document.getElementById("calDetailTitle").textContent = `${monthNames[month]} ${d}, ${year}`;
+
+      let html = "";
+      dayEvents.forEach(ev => {
+        html += `<div class="cal-event-card type-${ev.type}">
+          <span class="cal-event-card-type">${typeLabel[ev.type]}</span>
+          <h4>${ev.title}</h4>
+          <p>${ev.desc}</p>
+          ${(ev.time||ev.location) ? `<div class="cal-event-card-meta">
+            ${ev.time ? `<span>🕐 ${ev.time}</span>` : ""}
+            ${ev.time && ev.location ? " &nbsp;·&nbsp; " : ""}
+            ${ev.location ? `<span>📍 ${ev.location}</span>` : ""}
+          </div>` : ""}
+        </div>`;
+      });
+      document.getElementById("calDetailBody").innerHTML = html;
+    }
+
+    let viewYear = currentDate.getFullYear();
+    let viewMonth = currentDate.getMonth();
+
+    buildCalendar(viewYear, viewMonth);
+
+    document.getElementById("prevMonth").addEventListener("click", () => {
+      viewMonth--; if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+      selectedDate = null;
+      document.getElementById("calDetailTitle").textContent = "Select a date";
+      document.getElementById("calDetailBody").innerHTML = '<div class="cal-detail-empty">Click on a highlighted date to view event details.</div>';
+      buildCalendar(viewYear, viewMonth);
+    });
+    document.getElementById("nextMonth").addEventListener("click", () => {
+      viewMonth++; if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+      selectedDate = null;
+      document.getElementById("calDetailTitle").textContent = "Select a date";
+      document.getElementById("calDetailBody").innerHTML = '<div class="cal-detail-empty">Click on a highlighted date to view event details.</div>';
+      buildCalendar(viewYear, viewMonth);
+    });
+    document.getElementById("todayBtn").addEventListener("click", () => {
+      viewYear = currentDate.getFullYear();
+      viewMonth = currentDate.getMonth();
+      selectedDate = null;
+      document.getElementById("calDetailTitle").textContent = "Select a date";
+      document.getElementById("calDetailBody").innerHTML = '<div class="cal-detail-empty">Click on a highlighted date to view event details.</div>';
+      buildCalendar(viewYear, viewMonth);
+    });
+  </script>
+</body>
+</html>

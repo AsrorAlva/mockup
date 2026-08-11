@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Millennia World School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/Styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <script src="../components.js" defer></script>
+
+  <div data-header></div>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <img src="../../AssetsMWS/DSC05350.jpg" alt="MWS Main Office">
+      <div class="subpage-hero-scrim"></div>
+      <div class="subpage-hero-content">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Contact</span>
+        </div>
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- Main Contact Layout -->
+    <section class="subpage-section">
+      <div class="wrap">
+        
+        <div class="subpage-grid-2">
+          <!-- Left Column: Form -->
+          <div>
+            <form class="premium-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully! Our administrative office will get back to you within 24 hours.');">
+              <h2 style="margin-top: 0; margin-bottom: 24px; font-size: clamp(24px, 3vw, 32px);">Send us a message</h2>
+              
+              <div class="form-group">
+                <label for="senderName">Your Name</label>
+                <input type="text" id="senderName" class="form-control" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Email Address</label>
+                <input type="email" id="senderEmail" class="form-control" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="messageSubject">Subject</label>
+                <input type="text" id="messageSubject" class="form-control" placeholder="e.g. Inquiry regarding extracurricular activities" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactCategory">Category</label>
+                <select id="contactCategory" class="form-control" required>
+                  <option value="" disabled selected>Select department...</option>
+                  <option value="general">General Administration</option>
+                  <option value="admissions">Admissions &amp; Tours</option>
+                  <option value="finance">Finance Office</option>
+                  <option value="hr">Human Resources / Career</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Your Message</label>
+                <textarea id="senderMessage" class="form-control" placeholder="Please type your message in detail here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Right Column: Info and Address -->
+          <div class="subpage-body" style="padding-left: 20px;">
+            <p class="subpage-intro">We are here to answer your questions. Get in touch with our team via email, phone, or visit our green campus.</p>
+            
+            <h3 style="color: var(--burgundy);">Campus Address</h3>
+            <p style="margin-bottom: 30px;">
+              <strong>Millennia World School</strong><br>
+              Jl. Merpati Raya No. 103, Sawah Lama, Ciputat,<br>
+              Tangerang Selatan, Banten 15413, Indonesia
+            </p>
+
+            <h3 style="color: var(--burgundy);">Direct Contacts</h3>
+            <p style="margin-bottom: 30px;">
+              <strong>Administration &amp; Admission:</strong><br>
+              Phone: +62 21-7463-3333<br>
+              WhatsApp: +62 812-1111-2222<br>
+              Email: <a href="mailto:info@millennia21.id" style="color: var(--burgundy); text-decoration: underline;">info@millennia21.id</a>
+            </p>
+
+            <h3 style="color: var(--burgundy);">Office Hours</h3>
+            <ul class="premium-list" style="margin-top: 12px;">
+              <li class="premium-list-item">
+                <div class="premium-list-title">Monday – Friday</div>
+                <p style="font-size: 14px; margin: 0;">07:30 AM – 04:00 PM</p>
+              </li>
+              <li class="premium-list-item">
+                <div class="premium-list-title">Saturday</div>
+                <p style="font-size: 14px; margin: 0;">08:00 AM – 12:00 PM (Admissions office only)</p>
+              </li>
+              <li class="premium-list-item">
+                <div class="premium-list-title">Sunday &amp; Public Holidays</div>
+                <p style="font-size: 14px; margin: 0;">Closed</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Embedded Map -->
+        <h2 style="margin: 60px 0 20px; text-align: center;">Our Campus Location</h2>
+        <div class="contact-map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7314275134707!2d106.7262070747513!3d-6.300282493688862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fa70d8a57eb7%3A0x6b10705a6ef6c3b6!2sMillennia%20World%20School!5e0!3m2!1sen!2sid!4v1715569420000!5m2!1sen!2sid" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+</body>
+</html>
