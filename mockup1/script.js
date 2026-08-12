@@ -140,6 +140,21 @@ document.querySelectorAll(".activity-carousel").forEach((carousel) => {
   });
 });
 
+const faqToggles = document.querySelectorAll("[data-faq-toggle]");
+
+faqToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const item = toggle.closest(".faq-item");
+    if (!item) return;
+
+    const isOpen = item.classList.toggle("is-open");
+    const icon = toggle.querySelector("span");
+
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    if (icon) icon.textContent = isOpen ? "−" : "+";
+  });
+});
+
 setHeaderState();
 setActiveLink();
 window.addEventListener("scroll", () => {
