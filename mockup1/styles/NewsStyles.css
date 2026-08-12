@@ -965,7 +965,7 @@
   align-items: center;
   width: 100%;
   padding: 120px 20px 80px;
-  background-color: var(--mws-burgundy); /* Warna Merah MWS Header */
+  background-color: rgba(126, 21, 24, 0.94); /* Warna Merah MWS Header */
   color: #ffffff;
   text-align: center;
 }
