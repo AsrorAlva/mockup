@@ -55,6 +55,21 @@ a {
   text-decoration: none;
 }
 
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-text img {
+  display: block;
+  width: 50px; /* sesuaikan */
+  height: auto;
+  margin-top: 100%;
+}
+
+
 .wrap {
   max-width: 1240px;
   margin: 0 auto;
