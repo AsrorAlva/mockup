@@ -92,9 +92,7 @@
                 <img src="${logoUrl}" alt="Millennia World School" />
               </a>
               <p>
-                Millennia World School supports curious learners through caring
-                guidance, meaningful academics, and a warm international-minded
-                community.
+                Adipiscing sed voluptate, praesent posuere sunt primis reprehenderit ex consectetur est quis. Anim faucibus nulla veniam.
               </p>
             </div>
 
@@ -158,7 +156,7 @@
           <div class="chatbot-body">
             <div class="chat-messages" style="max-height: 180px; overflow-y: auto; margin-bottom: 12px; display: flex; flex-direction: column; gap: 8px;">
               <p style="margin: 0; background: var(--warm-white); padding: 8px 12px; font-size: 14px; border-radius: 0; align-self: flex-start; color: var(--charcoal);">
-                Hi 👋 Ask me anything about Millennia World School!
+                Ultrices 👋 exercitation augue in duis enim curae luctus.!
               </p>
             </div>
             <div style="display: flex; gap: 8px;">
@@ -401,6 +399,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".modal-overlay");
 
   if (modal && closeBtn && overlay && cards.length > 0) {
+    if (modal.parentElement !== document.body) {
+      document.body.appendChild(modal);
+    }
+
     const modalVideo = document.getElementById("modalVideo");
     const modalRole = document.getElementById("modalRole");
     const modalQuote = document.getElementById("modalQuote");

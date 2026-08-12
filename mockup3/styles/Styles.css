@@ -596,7 +596,6 @@ nav a:hover::after {
 
 /* ---------- PHILOSOPHY ---------- */
 .philosophy {
-  padding: 180px 0;
   text-align: center;
   position: relative;
   width: 100%;
@@ -641,8 +640,8 @@ nav a:hover::after {
   font-family: var(--f-voice);
   font-style: italic;
   font-weight: 500;
-  color: var(--charcoal);
-  font-size: clamp(24px, 2.2vw, 30px);
+  color: var(--white);
+  font-size: clamp(14px, 2.2vw, 20px);
   line-height: 1.2;
   max-width: 900px;
   margin: 0 auto;
