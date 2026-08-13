@@ -1,25 +1,25 @@
 :root {
   /* === MWS Official Brand Palette === */
-  --burgundy:        #7E1518;
-  --burgundy-dark:   #5E1013;
-  --white:           #FFFFFF;
-  --gold:            #D6A13A;
-  --gold-light:      #E8C56D;
-  --charcoal:        #241718;
-  --charcoal-muted:  #625759;
+  --burgundy: #7e1518;
+  --burgundy-dark: #5e1013;
+  --white: #ffffff;
+  --gold: #d6a13a;
+  --gold-light: #e8c56d;
+  --charcoal: #241718;
+  --charcoal-muted: #625759;
 
   /* === Semantic Secondary Colors === */
-  --rose:   #B94A4E;
-  --sage:   #6F8B6A;
-  --navy:   #1F2A44;
-  --sky:    #B8DDF8;
+  --rose: #b94a4e;
+  --sage: #6f8b6a;
+  --navy: #1f2a44;
+  --sky: #b8ddf8;
 
   /* === Supporting Neutrals === */
-  --warm-white:  #FAF8F3;
-  --border:      rgba(36, 23, 24, 0.14);
-  --gray:        #625759;
+  --warm-white: #faf8f3;
+  --border: rgba(36, 23, 24, 0.14);
+  --gray: #625759;
 
-  --deep-charcoal: #1A1212;
+  --deep-charcoal: #1a1212;
 
   --f-head: "Plus Jakarta Sans", sans-serif;
   --f-body: "Nunito Sans", sans-serif;
@@ -68,7 +68,6 @@ a {
   height: auto;
   margin-top: 100%;
 }
-
 
 .wrap {
   max-width: 1240px;
@@ -632,10 +631,6 @@ nav a:hover::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23B94A4E' fill-opacity='0.2' d='M300 0 L300 300 C134.31 300 0 165.69 0 0 Z'/%3E%3C/svg%3E");
 }
 
-
-
-
-
 .philosophy p {
   font-family: var(--f-voice);
   font-style: italic;
@@ -794,8 +789,8 @@ nav a:hover::after {
 /* Container Box Utama */
 .holderBox {
   position: relative;
-  flex: 0 0 360px; /* Lebar mantap 360px */
-  width: 360px;
+  flex: 0 0 300px; /* Lebar mantap 360px */
+  width: 300px;
   border-radius: 0;
   box-shadow: none;
   overflow: hidden;
@@ -809,7 +804,7 @@ nav a:hover::after {
 .innerBox {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4; /* Tetap proporsional, kini tampil lebih tinggi & luas */
+  aspect-ratio: 9 / 16; /* Tetap proporsional, kini tampil lebih tinggi & luas */
   border-radius: 0;
   overflow: hidden;
   background-color: var(--charcoal);
@@ -824,107 +819,107 @@ nav a:hover::after {
   object-fit: cover;
   border-radius: 0;
   filter: blur(0px);
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
-/* HOVER: Gambar Blur + Zoom Tipis */
+/* HOVER: Gambar Blur & Sedikit Zoom */
 .holderBox:hover .innerBox img {
-  filter: blur(6px) brightness(0.65);
-  transform: scale(1.08);
+  filter: blur(8px) brightness(0.5);
+  transform: scale(1.05);
 }
 
-/* Overlay Default */
+/* Gradasi Gelap Bawaan (Supaya Judul Teks Terbaca pada Kotak Biasa) */
 .boxOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(36, 23, 24, 0) 40%,
-    rgba(36, 23, 24, 0.8) 100%
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.75) 100%
   );
   transition: background 0.4s ease;
   z-index: 1;
 }
 
-/* HOVER Overlay: Lebih Pekat */
+/* HOVER: Overlay Menjadi Gelap Merata */
 .holderBox:hover .boxOverlay {
-  background: rgba(36, 23, 24, 0.45);
+  background: rgba(0, 0, 0, 0.65);
 }
 
-/* Wrapper Teks Konten */
+/* Wrapper Konten Teks */
 .boxContent {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 28px 24px; /* Padding disesuaikan dengan kontainer yang lebih besar */
+  inset: 0;
+  padding: 32px 24px;
   z-index: 2;
-  color: var(--white);
+  color: #fff;
   display: flex;
   flex-direction: column;
-  /* Posisi translateY disesuaikan agar hanya H3 yang kelihatan di awal */
-  transform: translateY(90px);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  justify-content: flex-end;
 }
 
-/* HOVER: Naik penuh ke atas */
-.holderBox:hover .boxContent {
-  transform: translateY(0);
-}
-
-/* 1. H3 / JUDUL: Always Visible */
+/* Judul (Selalu Terlihat di Posisi Bawah) */
 .boxTitle {
-  font-size: 20px; /* Ukuran font H3 disesuaikan lebih mantap */
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--white);
-  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 6px;
+  transition: transform 0.4s ease;
 }
 
-/* 2. ELEMEN PELENGKAP: Slide-Up & Fade-In saat Hover */
-.boxTag,
+/* Sub-Judul / Tag (Terlihat di Bawah Judul Saat Normal) */
+.boxTag {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Deskripsi & Link: Sembunyi Saat Normal */
 .boxDesc,
 .boxLink {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.boxTag { transition-delay: 0.05s; }
-.boxDesc { transition-delay: 0.1s; }
-.boxLink { transition-delay: 0.15s; }
-
-.holderBox:hover .boxTag,
-.holderBox:hover .boxDesc,
-.holderBox:hover .boxLink {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.boxTag {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gold);
-  margin-bottom: 6px;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.4s ease, margin 0.3s ease;
 }
 
 .boxDesc {
   font-size: 13px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .boxLink {
   font-size: 13px;
   font-weight: 600;
-  color: var(--white);
+  color: #fff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  margin-top: 0;
+}
+
+/* HOVER: Menampilkan Deskripsi dan Link */
+.holderBox:hover .boxDesc {
+  opacity: 1;
+  max-height: 120px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  transform: translateY(0);
+}
+
+.holderBox:hover .boxLink {
+  opacity: 1;
+  max-height: 40px;
+  transform: translateY(0);
 }
 
 .boxLink span {
@@ -932,7 +927,7 @@ nav a:hover::after {
 }
 
 .holderBox:hover .boxLink span {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* ---------- CLASSES / PROGRAMS SECTION (ELEVATED UI) ---------- */
@@ -976,9 +971,10 @@ nav a:hover::after {
   border: 1px solid var(--border);
   border-radius: 0;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 }
 
 /* Accent Line di Bagian Atas Card */
@@ -1020,8 +1016,9 @@ nav a:hover::after {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Photo Hover State */
@@ -1358,7 +1355,10 @@ nav a:hover::after {
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.55;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .logo-item:hover img {
@@ -1373,7 +1373,9 @@ nav a:hover::after {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Menggeser persis setengah panjang total track */
+    transform: translateX(
+      -50%
+    ); /* Menggeser persis setengah panjang total track */
   }
 }
 
@@ -1401,7 +1403,9 @@ nav a:hover::after {
   color: var(--white);
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(126, 21, 24, 0.28);
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .chatbot-toggle:hover {
@@ -1436,7 +1440,6 @@ nav a:hover::after {
 .chatbot-body {
   padding: 24px;
 }
-
 
 /* Modal */
 
@@ -1523,7 +1526,6 @@ nav a:hover::after {
   stroke-width: 2.4;
 }
 
-
 /* ---------- COMMUNITY VOICES ---------- */
 .community-voices {
   padding: 120px 0;
@@ -1574,7 +1576,9 @@ nav a:hover::after {
   height: 100%;
   object-fit: cover;
   filter: blur(0);
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .voice-card:hover .voice-media img {
@@ -1619,7 +1623,11 @@ nav a:hover::after {
   left: 0;
   right: 0;
   padding: 20px;
-  background: linear-gradient(180deg, transparent 0%, rgba(36, 23, 24, 0.85) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(36, 23, 24, 0.85) 100%
+  );
   color: var(--white);
   z-index: 2;
 }
@@ -1774,7 +1782,6 @@ nav a:hover::after {
   }
 }
 
-
 /* ---------- CAMPUS SPOTLIGHT (FULL WIDTH SLIDER) ---------- */
 .campus-spotlight {
   width: 100%;
@@ -1804,7 +1811,9 @@ nav a:hover::after {
   inset: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    visibility 0.8s ease-in-out;
   z-index: 1;
 }
 
@@ -1922,8 +1931,12 @@ nav a:hover::after {
     height: 40px;
     font-size: 20px;
   }
-  .spotlight-arrow.prev { left: 16px; }
-  .spotlight-arrow.next { right: 16px; }
+  .spotlight-arrow.prev {
+    left: 16px;
+  }
+  .spotlight-arrow.next {
+    right: 16px;
+  }
 }
 
 /* ---------- GUIDELINES REVISION OVERRIDES ---------- */
@@ -2126,7 +2139,11 @@ nav a:hover::after {
 .subpage-hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(25, 24, 23, 0.95) 0%, rgba(25, 24, 23, 0.5) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(25, 24, 23, 0.95) 0%,
+    rgba(25, 24, 23, 0.5) 100%
+  );
   z-index: 2;
   pointer-events: none;
 }
@@ -2278,7 +2295,9 @@ nav a:hover::after {
   font-family: var(--f-body);
   font-size: 15px;
   border-radius: 0;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .form-control:focus {
@@ -2356,7 +2375,9 @@ textarea.form-control {
 .faq-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 0 28px;
   color: var(--charcoal-muted);
   font-size: 15px;
@@ -2435,7 +2456,9 @@ textarea.form-control {
   border: 1px solid var(--border);
   border-radius: 0;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .calendar-card:hover {
@@ -2555,7 +2578,11 @@ textarea.form-control {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(36, 23, 24, 0.04), rgba(36, 23, 24, 0.78));
+  background: linear-gradient(
+    180deg,
+    rgba(36, 23, 24, 0.04),
+    rgba(36, 23, 24, 0.78)
+  );
 }
 
 .program-activity-card h3 {
