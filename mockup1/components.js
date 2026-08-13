@@ -41,7 +41,7 @@
             </li>
 
             <li class="dropdown">
-              <a class="${pagesActive}" href="academic.html">PAGES</a>
+              <a class="${pagesActive}" href="admission.html">PAGES</a>
               <button class="dropdown-trigger" type="button" aria-label="Open pages menu" aria-expanded="false" data-menu-toggle>
                 <span></span>
               </button>
