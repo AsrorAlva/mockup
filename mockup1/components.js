@@ -20,15 +20,31 @@
           <img src="${logoUrl}" alt="MWS Logo" />
         </div>
 
-        <nav class="navbar">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="navbar" id="primary-navigation" data-nav>
           <ul class="nav-menu">
-            <li class="dropdown">
+            <li>
               <a class="${isHome ? "active" : ""}" href="${homeHref("#hero")}"${sectionLinkAttr}>HOME</a>
 
             </li>
 
             <li class="dropdown">
               <a class="${pagesActive}" href="academic.html">PAGES</a>
+              <button class="dropdown-trigger" type="button" aria-label="Open pages menu" aria-expanded="false" data-menu-toggle>
+                <span></span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="academic.html">Our School</a></li>
                 <li><a href="admission.html">Admission</a></li>
@@ -40,6 +56,9 @@
 
             <li class="dropdown">
               <a class="${isActive("academic")}" href="academic.html">ACADEMICS</a>
+              <button class="dropdown-trigger" type="button" aria-label="Open academics menu" aria-expanded="false" data-menu-toggle>
+                <span></span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="kindergarten.html#kindergarten">Kindergarten</a></li>
                 <li><a href="elementary.html#elementary">Elementary</a></li>
@@ -131,5 +150,54 @@
 
   document.querySelectorAll("[data-footer]").forEach((target) => {
     target.outerHTML = footer;
+  });
+
+  const headerEl = document.querySelector(".header-container");
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const navLinks = document.querySelectorAll(".navbar a");
+  const menuToggles = document.querySelectorAll("[data-menu-toggle]");
+
+  const closeDropdowns = () => {
+    menuToggles.forEach((button) => {
+      const dropdown = button.closest(".dropdown");
+      dropdown?.classList.remove("is-open");
+      button.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  const closeNav = () => {
+    if (!headerEl || !navToggle) return;
+    headerEl.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    closeDropdowns();
+  };
+
+  navToggle?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = headerEl?.classList.toggle("nav-open") || false;
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    if (!isOpen) closeDropdowns();
+  });
+
+  menuToggles.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const dropdown = button.closest(".dropdown");
+      const isOpen = dropdown?.classList.toggle("is-open") || false;
+      button.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
+  navLinks.forEach((link) => link.addEventListener("click", closeNav));
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (headerEl && !headerEl.contains(target)) closeNav();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNav();
   });
 })();

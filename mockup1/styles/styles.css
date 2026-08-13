@@ -101,6 +101,42 @@ a {
   padding-top: 4px;
 }
 
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 3px auto;
+  background: currentColor;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.header-container.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.header-container.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-container.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -174,6 +210,10 @@ a {
 
 .dropdown {
   position: relative;
+}
+
+.dropdown-trigger {
+  display: none;
 }
 
 .dropdown::after {

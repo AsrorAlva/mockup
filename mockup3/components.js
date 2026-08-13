@@ -32,11 +32,27 @@
             </a>
           </div>
 
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            data-nav-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <div class="nav-links">
-            <nav class="navbar" aria-label="Main navigation">
+            <nav class="navbar" id="primary-navigation" aria-label="Main navigation">
               <ul class="nav-menu">
                 <li class="dropdown ${activeClass(groupActive("home"))}">
                   <a class="${activeClass(groupActive("home"))}" href="${homePrefix}#hero" aria-haspopup="true">Home</a>
+                  <button class="dropdown-trigger" type="button" aria-label="Open home menu" aria-expanded="false" data-menu-toggle>
+                    <span></span>
+                  </button>
                   <ul class="dropdown-menu">
                     <li><a href="${homePrefix}#campus-spotlight">Facilities</a></li>
                     <li><a href="${homePrefix}#philosophy">About MWS</a></li>
@@ -50,6 +66,9 @@
                 </li>
                 <li class="dropdown ${activeClass(groupActive("pages"))}">
                   <a class="${activeClass(groupActive("pages"))}" href="our-school.html" aria-haspopup="true">Pages</a>
+                  <button class="dropdown-trigger" type="button" aria-label="Open pages menu" aria-expanded="false" data-menu-toggle>
+                    <span></span>
+                  </button>
                   <ul class="dropdown-menu">
                     <li><a class="${activeClass(isActive("our-school"))}" href="our-school.html">Our School</a></li>
                     <li><a class="${activeClass(isActive("admission"))}" href="admission.html">Admission</a></li>
@@ -60,6 +79,9 @@
                 </li>
                 <li class="dropdown ${activeClass(groupActive("academics"))}">
                   <a class="${activeClass(groupActive("academics"))}" href="academic.html" aria-haspopup="true">Academics</a>
+                  <button class="dropdown-trigger" type="button" aria-label="Open academics menu" aria-expanded="false" data-menu-toggle>
+                    <span></span>
+                  </button>
                   <ul class="dropdown-menu academic-menu">
 
                     <li><a class="${activeClass(isActive("kindergarten"))}" href="kindergarten.html">Kindergarten <span>Early years learning</span></a></li>
@@ -243,12 +265,29 @@
   /* ---------- header scroll sync ---------- */
   const header = document.querySelector(".site-header");
   if (header) {
+    const navToggle = header.querySelector("[data-nav-toggle]");
+    const navLinks = header.querySelector(".nav-links");
+    const menuToggles = header.querySelectorAll("[data-menu-toggle]");
+    const closeDropdowns = () => {
+      menuToggles.forEach((button) => {
+        const dropdown = button.closest(".dropdown");
+        dropdown?.classList.remove("is-open");
+        button.setAttribute("aria-expanded", "false");
+      });
+    };
+    const closeNav = () => {
+      header.classList.remove("nav-open");
+      navToggle?.setAttribute("aria-expanded", "false");
+      closeDropdowns();
+    };
+
     let lastScrollY = window.scrollY;
 
     const syncHeader = () => {
       const currentY = window.scrollY;
       const isScrolled = currentY > 24;
-      const shouldHide = currentY > lastScrollY && currentY > 80;
+      const shouldHide =
+        currentY > lastScrollY && currentY > 80 && !header.classList.contains("nav-open");
 
       header.classList.toggle("is-scrolled", isScrolled);
       header.classList.toggle("is-hidden", shouldHide);
@@ -262,6 +301,43 @@
 
     window.addEventListener("scroll", syncHeader, { passive: true });
     syncHeader();
+
+    navToggle?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = header.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      header.classList.remove("is-hidden");
+      if (!isOpen) closeDropdowns();
+    });
+
+    menuToggles.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const dropdown = button.closest(".dropdown");
+        menuToggles.forEach((otherButton) => {
+          if (otherButton === button) return;
+          otherButton.closest(".dropdown")?.classList.remove("is-open");
+          otherButton.setAttribute("aria-expanded", "false");
+        });
+        const isOpen = dropdown?.classList.toggle("is-open") || false;
+        button.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+
+    navLinks?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeNav);
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (!header.contains(target)) closeNav();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeNav();
+    });
   }
 })();
 

@@ -505,3 +505,34 @@
     min-height: 300px;
   }
 }
+
+/* Responsive safety layer */
+@media (max-width: 760px) {
+  .academic-hero-content h1 {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+  }
+
+  .academic-hero-actions,
+  .overview-grid,
+  .daily-grid,
+  .switcher-panel,
+  .cta-panel,
+  .curriculum-grid,
+  .academic-gallery,
+  .switcher-links,
+  .rhythm-list div {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-hero-actions a,
+  .cta-panel a,
+  .switcher-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .daily-media img,
+  .gallery-card {
+    min-height: 260px;
+  }
+}

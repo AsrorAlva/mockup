@@ -787,3 +787,34 @@
 
 
 }
+
+/* Responsive safety layer */
+@media (max-width: 760px) {
+  .news-hero-content h1 {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+  }
+
+  .blog-layout-container,
+  .form-group-row,
+  .post-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .post-footer,
+  .single-post-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn-read-more,
+  .btn-submit-comment,
+  .page-number,
+  .next-page {
+    text-align: center;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+  }
+}

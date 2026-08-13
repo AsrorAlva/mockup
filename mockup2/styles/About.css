@@ -311,3 +311,27 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Responsive safety layer */
+@media (max-width: 760px) {
+  .about-hero-content h1 {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+  }
+
+  .about-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about-block-grid,
+  .about-philosophy-layout,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-block-media img,
+  .about-philosophy-media img {
+    height: auto;
+    min-height: 280px;
+  }
+}

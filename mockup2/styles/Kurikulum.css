@@ -466,3 +466,34 @@
     gap: 10px;
   }
 }
+
+/* Responsive safety layer */
+@media (max-width: 760px) {
+  .curr-hero-content h1 {
+    font-size: clamp(2.3rem, 12vw, 3.6rem);
+  }
+
+  .curr-intro-grid,
+  .curr-split,
+  .curr-overlap,
+  .curr-duo-grid,
+  .curr-sustainable {
+    grid-template-columns: 1fr;
+  }
+
+  .curr-split-media img,
+  .curr-overlap-media img,
+  .curr-sustainable-media img {
+    height: auto;
+    min-height: 280px;
+  }
+
+  .curr-steps li {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .curr-links-inner a {
+    width: 100%;
+    text-align: center;
+  }
+}
