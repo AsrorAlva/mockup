@@ -443,6 +443,12 @@ iframe {
 @media (max-width: 860px) {
   .header-container {
     height: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .header-container.is-scrolled,
+  .header-container.nav-open {
     background: var(--mws-burgundy);
     box-shadow: 0 10px 26px rgba(36, 23, 24, 0.18);
   }

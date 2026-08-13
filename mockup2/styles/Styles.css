@@ -2242,7 +2242,13 @@ button {
 
 /* Mobile navbar polish */
 @media (max-width: 980px) {
-  .site-header,
+  .site-header {
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
   .site-header.is-scrolled,
   .site-header.nav-open {
     top: 0;

@@ -72,6 +72,11 @@ a {
   background: var(--mws-burgundy2);
 }
 
+.header-container.nav-open {
+  background: var(--mws-burgundy);
+  box-shadow: 0 10px 26px rgba(36, 23, 24, 0.18);
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -1709,7 +1714,12 @@ section {
     gap: 24px;
     min-height: auto;
     padding: 24px;
+  background: transparent;
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease;
   }
+
 
   .header-container.is-scrolled .header {
     min-height: auto;
