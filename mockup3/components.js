@@ -391,7 +391,7 @@ if (heroSlides.length > 0) {
 
   function startHeroTimer() {
     clearInterval(heroTimer);
-    heroTimer = setInterval(() => goToSlide(heroIndex + 1), 6500);
+    heroTimer = setInterval(() => goToSlide(heroIndex + 1), 2600);
   }
 
   heroNavBtns.forEach((btn) => {
