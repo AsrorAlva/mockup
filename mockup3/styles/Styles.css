@@ -3837,10 +3837,13 @@ section,
 }
 
 .class-grid,
-.voices-grid,
 .news-list-grid,
 .program-activity-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.community-voices .voices-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .logo-text img {

@@ -6,6 +6,7 @@
   --mws-teal: #007a87;
   --mws-gold: #f4b41a;
   --mws-burgundy: #561c22;
+  --mws-burgundy2: #66040B;
   --mws-warm-white: #f8f7f3;
   --mws-white: #ffffff;
   --mws-charcoal: #242222;
@@ -14,6 +15,7 @@
   --mws-font-heading: "Plus Jakarta Sans", sans-serif;
   --mws-font-body: "Nunito Sans", sans-serif;
   --mws-font-voice: "Lora", serif;
+
 }
 
 * {
@@ -67,7 +69,7 @@ a {
 }
 
 .header-container.is-scrolled {
-  background: var(--mws-burgundy);
+  background: var(--mws-burgundy2);
 }
 
 .header {
