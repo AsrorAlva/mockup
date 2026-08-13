@@ -57,6 +57,7 @@
                 <li><a class="${active("schoolCalendar")}" href="schoolCalendar.html">School calendar</a></li>
                 <li><a class="${active("news", "newsDetail")}" href="news.html">News</a></li>
                 <li><a class="${active("contact")}" href="contact.html">Contact</a></li>
+                <li class="mobile-nav-cta"><a href="contact.html">Book a Tour</a></li>
               </ul>
             </nav>
           </div>
@@ -261,5 +262,4 @@
     closeDropdown();
   });
 })();
-
 
